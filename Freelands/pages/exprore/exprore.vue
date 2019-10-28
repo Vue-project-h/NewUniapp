@@ -20,7 +20,8 @@
 		 <view class="exp-topic">
 			 <view class="title ti-more">
 			 	专题
-				<text class="look-more">更多</text>
+				
+				<text class="look-more" @click="handelMoreTopic">更多</text>
 			 </view>
 		 	<swiper class="card-swiper square-dot" :class="dotStyle?'square-dot':'round-dot'" :circular=true
 		 	 interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
@@ -104,6 +105,11 @@ export default {
 			// 初始化towerSwiper 传已有的数组名即可
 		},
 		methods: {
+			handelMoreTopic(){
+				uni.navigateTo({
+					url:"/pages/moretopic/moretopic"
+				})
+			},
 			DotStyle(e) {
 				this.dotStyle = e.detail.value
 			},

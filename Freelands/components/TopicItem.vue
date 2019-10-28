@@ -24,6 +24,9 @@
 </script>
 
 <style>
+	.classifyitem {
+	margin-bottom: 30upx;	
+	}
 	.classifyitem >uni-view {
 		width: 690upx;
 		height: 380upx;
