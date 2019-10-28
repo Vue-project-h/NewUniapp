@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "day-sign": "/Components/DaySign",
+    "potery": "/Components/Potery",
+    "topics": "/Components/MyTopics"
+  }
+}

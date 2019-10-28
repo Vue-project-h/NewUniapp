@@ -1,0 +1,1 @@
+<view class="content"><view class="text-area"><day-sign vue-id="1" bind:__l="__l"></day-sign></view><view class="item-list"><potery vue-id="2" bind:__l="__l"></potery></view><view class="more"><topics vue-id="3" bind:__l="__l"></topics></view></view>

@@ -1,21 +1,34 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
-			<text class="title">{{title}}</text>
+			<DaySign></DaySign>
+		</view>
+		<view class="item-list">
+			<Potery></Potery>
+		</view>
+		<view class="more">
+			<Topics></Topics>
 		</view>
 	</view>
 </template>
 
 <script>
+	import DaySign from '../../Components/DaySign.vue'
+	import Potery from '../../Components/Potery.vue'
+	import Topics from '../../Components/MyTopics.vue'
 	export default {
 		data() {
 			return {
 				title: 'Hello'
 			}
 		},
+		components:{
+			'DaySign':DaySign,
+			'Potery':Potery,
+			'Topics':Topics
+		},
 		onLoad() {
-
+			// console.log(1111)
 		},
 		methods: {
 
@@ -24,29 +37,11 @@
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+	.content{
+		background: white;
 	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+	/* .more{
+		background: red;
+		height: 100upx;
+	} */
 </style>

@@ -1,0 +1,8 @@
+
+.userinfocontent{
+	padding: 0 20rpx;
+	letter-spacing: 5rpx;
+	font-size: 30rpx;
+	text-align: justify;
+}
+
