@@ -6,11 +6,41 @@
 				"navigationBarTitleText": "uni-app"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/exprore/exprore",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/clntest/clntest",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/Detail/Detail",
+            "style" : {
+				"enablePullDownRefresh":true,
+				"navigationBarBackgroundColor":"#ffffff",
+				"app-plus": {
+				    "titleNView": {
+				        
+				        "buttons": [
+				        {
+				             "color": "#57585c",
+				             "colorPressed": "#57585c",
+				             "float": "right",
+				             "fontSize": "22px",
+							 "fontWeight":"bold",
+				             "fontSrc": "/static/iconfont.ttf", // 字体文件
+				             "text": "\ue606" // 字体图标\u 开头，加上字体图标unicode后面四位
+				        }
+				        ]
+				    }
+				}
+			}
+        }
+    ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTextStyle": "black"
+		
+		
 	}
 }
