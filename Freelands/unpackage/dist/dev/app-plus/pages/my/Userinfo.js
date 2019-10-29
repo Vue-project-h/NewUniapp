@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"userinfocontent{ padding: 0 ",[0,20],"; letter-spacing: ",[0,5],"; font-size: ",[0,30],"; text-align: justify; }\n",],undefined,{path:"./pages/my/Userinfo.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/my/Userinfo.wxml') } }));

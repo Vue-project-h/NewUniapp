@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"addmymargin{ margin: ",[0,50],"; }\n",],undefined,{path:"./pages/my/Sendemail.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/my/Sendemail.wxml') } }));

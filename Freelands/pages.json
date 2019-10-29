@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom"
 			}
 		}
 	    ,{
@@ -60,11 +60,111 @@
             	    }
             	}
             }
-        }
+        },
+		{
+		    "path" : "pages/foucse/foucse",
+		    "style": {
+		    	"navigationStyle": "custom"
+		    }
+		},
+		{
+		    "path" : "pages/create/create",
+		    "style": {
+		    	"navigationStyle": "custom"
+		    }
+		},
+		{
+		    "path" : "pages/my/my",
+		    "style": {
+		    	"navigationStyle": "custom"
+		    }
+		},
+		{
+		    "path" : "pages/my/Setting",
+		    "style": {
+		    	"navigationStyle": "default",
+				"navigationBarTitleText":"设置"
+		    }
+		},
+		{
+		    "path" : "pages/my/Sendemail",
+		    "style": {
+		    	"navigationStyle": "default",
+				"navigationBarTitleText":"反馈信息"
+		    }
+		},
+		{
+		    "path" : "pages/my/Userinfo",
+		    "style": {
+		    	"navigationStyle": "default",
+				"navigationBarTitleText":"用户协议"
+		    }
+		},
+		{
+		    "path" : "pages/my/Aboutus",
+		    "style": {
+		    	"navigationStyle": "default",
+				"navigationBarTitleText":"关于我们"
+		    }
+		},
+		{
+		    "path" : "pages/login/login",
+		    "style": {
+		    	"navigationStyle": "custom"
+		    }
+		},
+		{
+		    "path" : "pages/login/register",
+		    "style": {
+		    	"navigationStyle": "custom"
+		    }
+		},
+		{
+		    "path" : "pages/login/forget",
+		    "style": {
+		    	"navigationStyle": "custom"
+		    }
+		}
     ],
+	
 	"globalStyle": {
-		"navigationBarTextStyle": "black"
-		
-		
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#3cc51f",
+	    "borderStyle": "black",
+		"height":"80upx",
+	    "backgroundColor": "#ffffff",
+		"color":"#8b8687",
+		"selectedColor":"#404146",
+		"fontSize":"58upx",
+	    "list": [{
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/image/tapbar_1_03.jpg",
+	        "selectedIconPath": "static/image/tapbar_1_active.jpg",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/foucse/foucse",
+	        "iconPath": "static/image/tapbar_2.jpg",
+	        "selectedIconPath": "static/image/tapbar_2_active_03.jpg",
+	        "text": "关注"
+	    },
+		{
+		    "pagePath": "pages/create/create",
+		    "iconPath": "static/image/tapbar_3.jpg",
+		    "selectedIconPath": "static/image/tapbar_3_active_03.jpg",
+		    "text": "创作"
+		},
+		{
+		    "pagePath": "pages/my/my",
+		    "iconPath": "static/image/tapbar_4.jpg",
+		    "selectedIconPath": "static/image/tapbar_4_active_03.jpg",
+		    "text": "我"
+		}
+		]
 	}
 }

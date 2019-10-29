@@ -1,0 +1,24 @@
+<template>
+	<view class="padding">
+			<view class="topic-topbar flex">
+				<text class='text-black text-bold text-xxl '>话题</text>
+				<text class= 'text-blue'>更多</text>
+			</view>
+			<view class="cuIcon-new text-gray text-sl padding-top padding-bottom"></view>
+			<view class="items text-black text-xxl">
+				最让你后悔的一件事是？..
+			</view>
+			<view class="my_talk text-gray padding-top-sm">
+				84个讨论
+			</view>
+		</view>
+</template>
+
+<script>
+</script>
+
+<style>
+	.topic-topbar{
+		justify-content: space-between;
+	}
+</style>

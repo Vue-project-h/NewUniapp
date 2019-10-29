@@ -14,7 +14,7 @@
 					</view>
 				</view>
 				
-				
+				<text class="notice">关注</text>
 			</view>
 			<view class="a-img shadow">
 				<image src="https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png"></image>
@@ -70,5 +70,13 @@
 		color: #a3a3a3;
 		font-size: 24upx;
 		line-height: 30upx;
+	}
+	.notice {
+		position: absolute;
+		right: 30upx;
+		line-height: 30upx;
+		padding: 6upx;
+		border: 1px solid #1e1e1e;
+		border-radius: 21upx;
 	}
 </style>

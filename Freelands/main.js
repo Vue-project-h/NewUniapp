@@ -5,6 +5,7 @@ import './static/css/icon.css'
 import './static/css/animation.css'
 
 
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'

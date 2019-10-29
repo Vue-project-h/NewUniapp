@@ -1,52 +1,346 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+	<view class="">
+	<scroll-view class="uni-slidingMenu solid-bottom shadow-warp" scroll-x >
+		<view  :class="['slidingMenuList',activeIndex==index?'active':'']" v-for="(item, index) in list" :key="index" @click="getActive(index)" v-cloak>{{ item }}</view>
+	</scroll-view>
+	<view>
+		<swiper @change="handelSlide" :current='activeIndex'   :style="{height:swiperHeight+'px'}">
+			<swiper-item>
+				<view class="swiper-item list">
+					<view class="content">
+						<view class="text-area">
+							<DaySign></DaySign>
+						</view>
+						<view class="item-list">
+							<Potery></Potery>
+						</view>
+						<view class="more">
+							<Topics></Topics>
+						</view>
+					</view>
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="swiper-item list1">
+					<view class="exprore">
+						 <view class="uni-padding-wrap">
+							<view class="page-section swiper">
+								<view class="page-section-spacing">
+									<swiper class="swiper" :indicator-dots=true :autoplay=true :interval="3000" :circular=true>
+										<swiper-item>
+											<view class="swiper-item uni-bg-red">A</view>
+										</swiper-item>
+										<swiper-item>
+											<view class="swiper-item uni-bg-green">B</view>
+										</swiper-item>
+										<swiper-item>
+											<view class="swiper-item uni-bg-blue">C</view>
+										</swiper-item>
+									</swiper>
+								</view>
+							</view>
+						 </view>
+						 <view class="exp-topic">
+							 <view class="title ti-more">
+							 	专题
+								
+								<text class="look-more" @click="handelMoreTopic">更多</text>
+							 </view>
+						 	<swiper class="card-swiper square-dot" :class="dotStyle?'square-dot':'round-dot'" :circular=true
+						 	 interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
+						 	 indicator-active-color="#0081ff">
+						 		<swiper-item v-for="(item,index) in swiperList" :key="index" :class="cardCur==index?'cur':''">
+						 			<view class="swiper-item">
+						 				<image :src="item.url" mode="aspectFill" v-if="item.type=='image'" class="exp-img"></image>
+						 				<video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
+										<view class="img-text">
+											《飞地》从刊
+										</view>
+									</view>
+						 		</swiper-item>
+						 	</swiper>
+						 </view>
+						 <view class="classify">
+						 	<view class="title">
+						 		分类
+						 	</view>
+							<view class="classify-list">
+								<ClassifyItem></ClassifyItem>
+								<ClassifyItem></ClassifyItem>
+								<ClassifyItem></ClassifyItem>
+								<ClassifyItem></ClassifyItem>
+								<ClassifyItem></ClassifyItem>
+							</view>
+						 </view>
+						      
+						        
+					</view>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
 	</view>
 </template>
 
 <script>
+	import DaySign from '../../components/DaySign.vue'
+	import Potery from '../../components/Potery.vue'
+	import Topics from '../../components/MyTopics.vue'
+	import ClassifyItem from '../../components/ClassifyItem.vue'
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				// swiper自适应高度
+				 listHeight:0,  //内部的高度
+				 swiperHeight:0,  //外部的高度
+
+				title: 'Hello',
+				list: ['推荐', '探索'],
+				activeIndex:"0",
+				cardCur: 0,
+				swiperList: [{
+					id: 0,
+					type: 'image',
+					url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
+				}, {
+					id: 1,
+					type: 'image',
+					url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg',
+				}, {
+					id: 2,
+					type: 'image',
+					url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
+				}, {
+					id: 3,
+					type: 'image',
+					url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
+				}, {
+					id: 4,
+					type: 'image',
+					url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
+				}, {
+					id: 5,
+					type: 'image',
+					url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
+				}, {
+					id: 6,
+					type: 'image',
+					url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
+				}],
+				dotStyle: false,
+				towerStart: 0,
+				direction: ''
 			}
 		},
-		onLoad() {
-
+		components:{
+			'DaySign':DaySign,
+			'Potery':Potery,
+			'Topics':Topics,
+			ClassifyItem,
 		},
-		methods: {
+		onLoad() {
+			this.TowerSwiper('swiperList');
+			// 初始化towerSwiper 传已有的数组名即可
+		},
+		onShow() {
+			let _this = this;
+			setTimeout(function(){
+				let list = ".list";
+				_this.getlistHeight(list);
+			},10) 
+		},
 
+		methods: {
+			// swiper自适应高度
+			getlistHeight(list){
+					let _this = this
+					let info = uni.createSelectorQuery().select(list);
+					// console.log(info)
+					info.boundingClientRect(function(data) {
+						// console.log(111)
+						// console.log(data)  // 获取元素的各种参数
+						 _this.listHeight = data.height ; // 获取元素高度
+						_this.getHeight();
+					}).exec();
+				},
+				getHeight(){
+					let _this = this;
+					_this.swiperHeight = _this.listHeight;
+					return _this.swiperHeight;
+				},
+			
+			getActive(index){
+				this.activeIndex=index;
+				// this.$emit("changes",this.activeIndex);
+				
+			},
+			handelSlide(detail){
+				this.activeIndex=detail.detail.current;
+				  let _this = this;
+				  		// 不同的tab不同的高度赋不同的值
+				  		if(detail.target.current==0){
+				  			let list = ".list";
+				  			_this.getlistHeight(list);
+				  		}else if(detail.target.current==1){
+				  			let list = ".list1";
+				  			_this.getlistHeight(list);
+				  		}
+				 
+				// console.log()
+			},
+			handelMoreTopic(){
+				uni.navigateTo({
+					url:"/pages/moretopic/moretopic"
+				})
+			},
+			DotStyle(e) {
+				this.dotStyle = e.detail.value
+			},
+			// cardSwiper
+			cardSwiper(e) {
+				this.cardCur = e.detail.current
+			},
+			// towerSwiper
+			// 初始化towerSwiper
+			TowerSwiper(name) {
+				let list = this[name];
+				for (let i = 0; i < list.length; i++) {
+					list[i].zIndex = parseInt(list.length / 2) + 1 - Math.abs(i - parseInt(list.length / 2))
+					list[i].mLeft = i - parseInt(list.length / 2)
+				}
+				this.swiperList = list
+			},
+			
+			// towerSwiper触摸开始
+			TowerStart(e) {
+				this.towerStart = e.touches[0].pageX
+			},
+			
+			// towerSwiper计算方向
+			TowerMove(e) {
+				this.direction = e.touches[0].pageX - this.towerStart > 0 ? 'right' : 'left'
+			},
+			
+			// towerSwiper计算滚动
+			TowerEnd(e) {
+				let direction = this.direction;
+				let list = this.swiperList;
+				if (direction == 'right') {
+					let mLeft = list[0].mLeft;
+					let zIndex = list[0].zIndex;
+					for (let i = 1; i < this.swiperList.length; i++) {
+						this.swiperList[i - 1].mLeft = this.swiperList[i].mLeft
+						this.swiperList[i - 1].zIndex = this.swiperList[i].zIndex
+					}
+					this.swiperList[list.length - 1].mLeft = mLeft;
+					this.swiperList[list.length - 1].zIndex = zIndex;
+				} else {
+					let mLeft = list[list.length - 1].mLeft;
+					let zIndex = list[list.length - 1].zIndex;
+					for (let i = this.swiperList.length - 1; i > 0; i--) {
+						this.swiperList[i].mLeft = this.swiperList[i - 1].mLeft
+						this.swiperList[i].zIndex = this.swiperList[i - 1].zIndex
+					}
+					this.swiperList[0].mLeft = mLeft;
+					this.swiperList[0].zIndex = zIndex;
+				}
+				this.direction = ""
+				this.swiperList = this.swiperList
+			},
 		}
 	}
 </script>
 
 <style>
-	.content {
+	.content{
+		background: white;
+		padding-bottom:200upx ;
+	}
+	.more{
+		/* background: red; */
+		height: 100upx;
+	}
+	
+		page{
+			background-color: #fafafa;
+		}
+	/* 滑动菜单栏的总内容区域 */
+	.uni-slidingMenu {
+		width: 100%;
+		white-space: nowrap;
+		height: 100rpx;
+		background-color: #FFFFFF;
+	}
+	/* 循环显示的菜单栏 */
+	.slidingMenuList {
+		height: 100rpx;
+		line-height: 100rpx;
+		display: inline-block;
+		font-size: 24rpx;
+		margin-left: 80rpx;
+		color:#7d7778;
+	}
+	.slidingMenuList:last-child{
+		margin-right: 60rpx;
+	}
+	/* 点击选中菜单栏时的样式 */
+	.active {
+		color: #414247;
+		font-size: 24rpx;
+		margin-left: 80rpx;
+		font-weight: 600;
+		border-bottom: 4rpx solid #000000;
+		box-sizing: border-box;
+	}
+	swiper-item{
+		/* min-height:50upx ; */
+		/* background: red; */
+	}
+	
+	
+	.exprore {
+		padding: 0 30upx;
+	}
+	.title{
+		font-size: 38upx;
+		color: #030303;
+		margin: 30upx 0;
+	}
+	.classify-list {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
+	
+	.card-swiper uni-swiper-item {
+	    width: 80% !important;
+	    padding:0px;
+		height:256upx
 	}
-
-	.text-area {
+	.card-swiper {
+	    height: 300upx !important;
+	}
+	.ti-more {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
+		pos-bottom: 20upx;
 	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+	.look-more {
+		font-size: 30upx;
+		color: #4899d7;
+		
+	}
+	.img-text {
+		color: #2c2b32;
+		font-size: 30upx;
+	}
+	.screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
+	    width: 100%;
+	    display: block;
+	    height: 250upx;
+	    margin: 0;
+	    border-radius: 5px;
+	    pointer-events: none;
 	}
 </style>
