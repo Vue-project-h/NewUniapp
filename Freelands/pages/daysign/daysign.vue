@@ -18,7 +18,7 @@
 		},
 		created() {
 			uni.request({
-				url: 'http://rap2api.taobao.org/app/mock/234629/get/daysign',
+				url: this.base_url+"daysign/list",
 				method: 'GET',
 				success: res => {
 					let arr=res.data.data.map((obj)=>{

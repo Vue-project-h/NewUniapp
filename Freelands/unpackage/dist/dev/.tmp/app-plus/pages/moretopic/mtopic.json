@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "titleNView": {
+    "titleText": "全部话题"
+  },
+  "usingComponents": {}
+}

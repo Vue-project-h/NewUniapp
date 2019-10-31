@@ -1,0 +1,23 @@
+
+.names{
+	-webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	        flex-wrap: nowrap;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.my_pos{
+	position: absolute;
+	top: 20rpx;
+	right: 20rpx;
+}
+.my_add_boder image{
+	border-radius: 15rpx;
+}
+

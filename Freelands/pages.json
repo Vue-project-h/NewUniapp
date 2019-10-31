@@ -50,6 +50,19 @@
             }
         },
 		{
+		    "path" : "pages/moretopic/mtopic",
+		    "style" : {
+		    	"enablePullDownRefresh":true,
+		    	"navigationBarBackgroundColor":"#ffffff",
+		    	"app-plus": {
+		    	    "titleNView": {
+		    	        "titleText":"全部话题"
+		    	        
+		    	    }
+		    	}
+		    }
+		},
+		{
 		    "path" : "pages/foucse/foucse",
 		    "style": {
 		    	"navigationBarBackgroundColor":"#ffffff",
