@@ -12,19 +12,19 @@
 			
 			<view class="cu-item shadow" @click="handelClick">
 				<view class="image my_add_boder">
-					<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
+					<image :src="detaildata.imgurl"
 					 mode="widthFix"></image>
 					<view class="my_pos cuIcon-like text-white text-bold text-xl"></view>
 				</view>
 				
 				<view class="cu-list menu-avatar">
 					<view class="text-black text-left padding-sm text-lg text-bold text-cut">
-						我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。
+						{{detaildata.title}}
 					</view>
 					<view class=" flex padding-sm">
 						<!-- <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view> -->
 						<view class="flex-sub flex names">
-							<view class="text-grey">正义天使 凯尔</view>
+							<view class="text-grey">{{detaildata.authorname}} {{detaildata.clyname}}</view>
 							<view class="text-gray text-sm ">
 								<view class="text-gray text-sm">
 									<text class="cuIcon-attentionfill margin-lr-xs"></text> 10
@@ -43,14 +43,21 @@
 
 <script>
 	export default{
+		props:{
+			detaildata:Object
+		},
 		created() {
 			let times=new Date()
 			console.log(times)
 		},
 		methods:{
 			handelClick(){
+				var detaildata = JSON.stringify(this.detaildata);
+				// this.$route.query
+				// router.push({ path: 'register', query: { plan: 'private' }})
+				// this.$router.push({path:'/pages/Detail/Detail',query:this.detaildata});
 				uni.navigateTo({
-					url:"/pages/Detail/Detail"
+					url:"/pages/Detail/Detail?detaildata="+detaildata
 				})
 			}
 		}

@@ -2,6 +2,7 @@
   "enablePullDownRefresh": true,
   "navigationBarBackgroundColor": "#ffffff",
   "titleNView": {
+<<<<<<< HEAD
     "buttons": [
       {
         "color": "#1a1a1a",
@@ -13,6 +14,9 @@
         "text": "全部专题"
       }
     ]
+=======
+    "titleText": "全部专题"
+>>>>>>> master
   },
   "usingComponents": {
     "topic-item": "/components/TopicItem"

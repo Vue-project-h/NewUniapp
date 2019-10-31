@@ -12,12 +12,18 @@
 				<wInput
 						v-model="nameData"
 						type="text"
+<<<<<<< HEAD
 						maxlength="12"
 						placeholder="昵称"
+=======
+						maxlength="11"
+						placeholder="设置昵称"
+>>>>>>> master
 					></wInput>
 					<wInput
 						v-model="passData"
 						type="password"
+<<<<<<< HEAD
 						maxlength="20"
 						placeholder="登录密码"
 						isShowPass
@@ -31,6 +37,22 @@
 						ref="runCode"
 						
 					></wInput>
+=======
+						maxlength="11"
+						placeholder="设置密码"
+						isShowPass
+					></wInput>
+					<!-- <wInput
+						v-model="verCode"
+						type="number"
+						maxlength="4"
+						placeholder="确认登录"
+						
+						isShowCode
+						ref="runCode"
+						@setCode="getVerCode()"
+					></wInput> -->
+>>>>>>> master
 					
 				</view>
 				
@@ -126,6 +148,7 @@
 				    });
 				    return false;
 				}
+<<<<<<< HEAD
 				if (!re.test(this.nameData)) {
 				    uni.showToast({
 				        icon: 'none',
@@ -184,6 +207,47 @@
 						}
 				})
 				console.log("注册成功")
+=======
+				if (this.phoneData.length <1) {
+				    uni.showToast({
+				        icon: 'none',
+						position: 'bottom',
+				        title: '请填写昵称'
+				    });
+				    return false;
+				}
+		        if (this.passData.length < 1) {
+		            uni.showToast({
+		                icon: 'none',
+						position: 'bottom',
+		                title: '请填写密码'
+		            });
+		            return false;
+		        }
+				
+				_this.isRotate=true
+				setTimeout(function(){
+					_this.isRotate=false
+				},3000)
+				
+				uni.request({
+					url:this.base_url+"users/register",
+					method:'POST',
+					data:{
+						"username":this.phoneData,
+						"pwd":this.passData,
+						"dis": '',
+					    "imgurl": '',
+					    "df1": '',
+					    "df2":''
+					},
+					
+					success: (res) => {
+						console.log(res)
+					}
+				})
+				
+>>>>>>> master
 		    }
 		}
 	}

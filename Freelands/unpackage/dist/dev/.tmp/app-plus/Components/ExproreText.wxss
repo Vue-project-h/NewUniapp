@@ -21,5 +21,9 @@
 	text-align: justify;
 }
 .exproretext ._img {
+<<<<<<< HEAD
+=======
+	margin: 20rpx 0;
+>>>>>>> master
 }
 

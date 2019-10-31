@@ -1,0 +1,1 @@
+<view class="daysigndetail"><block wx:for="{{data}}" wx:for-item="item" wx:for-index="index" wx:key="index"><day-sign vue-id="{{'1-'+index}}" dsitem="{{item}}" bind:__l="__l"></day-sign></block></view>

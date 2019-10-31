@@ -15,7 +15,12 @@
     "pages/login/login",
     "pages/login/register",
     "pages/login/forget",
+<<<<<<< HEAD
     "pages/edit/edit"
+=======
+    "pages/daysign/daysign",
+    "pages/daysign/DaySignDetail"
+>>>>>>> master
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -64,6 +69,6 @@
     "autoclose": false
   },
   "appname": "Freelands",
-  "compilerVersion": "2.3.3",
+  "compilerVersion": "2.3.7",
   "usingComponents": {}
 }

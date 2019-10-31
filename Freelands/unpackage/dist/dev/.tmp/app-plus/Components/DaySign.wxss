@@ -32,6 +32,7 @@
   height: 500rpx;
   font-family: '\6977\4F53';
   position: relative;
+  margin-bottom: 30rpx;
 }
 .daysign image {
     width: 100%;

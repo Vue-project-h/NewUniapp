@@ -95,23 +95,36 @@
 					//判断是否加载中，避免重复点击请求
 					return false;
 				}
+<<<<<<< HEAD
 				if (this.nameData.length == "") {
+=======
+				if (this.phoneData.length < 1) {
+>>>>>>> master
 				     uni.showToast({
 				        icon: 'none',
 						position: 'bottom',
-				        title: '用户名不能为空'
+				        title: '请填写用户名'
 				    });
 				    return false;
 				}
+<<<<<<< HEAD
 		        if (this.passData.length =="") {
 		            uni.showToast({
 		                icon: 'none',
 						position: 'bottom',
 		                title: '密码不能为空'
+=======
+		        if (this.passData.length < 1) {
+		            uni.showToast({
+		                icon: 'none',
+						position: 'bottom',
+		                title: '请填写密码'
+>>>>>>> master
 		            });
 		            return false;
 		        }
 				
+<<<<<<< HEAD
 				
 				_this.isRotate=true
 				// setTimeout(function(){
@@ -216,6 +229,32 @@
 				// }).catch(err => {
 				// 	uni.hideLoading();
 				// })
+=======
+				
+				
+				_this.isRotate=true
+				setTimeout(function(){
+					_this.isRotate=false
+				},3000)
+				uni.request({
+					url:this.base_url+"users/login",
+					method:'POST',
+					data:{
+						"username":this.phoneData,
+						"pwd":this.passData
+					},
+					success: (res) => {
+						console.log(res)
+						uni.setStorage({
+						    key: 'token',
+						    data: res.data.token,
+						    success: function () {
+						        console.log('successtoken');
+						    }
+						});
+					}
+				})
+>>>>>>> master
 				
 		    }
 		}

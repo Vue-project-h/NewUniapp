@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 .container {
     padding: 10px;
 }
@@ -9,5 +10,20 @@
 }
 button {
     margin-top: 10px;
+=======
+.foc{
+	padding: 0 30rpx;
+}
+.focusenum{
+	padding: 30rpx 0;
+	font-size: 26rpx;
+	color: #2e2f34;
+}
+.loaddata{
+	font-size: 22rpx;
+	color: #8a8686;
+	text-align: center;
+	padding: 20rpx 0;
+>>>>>>> master
 }
 

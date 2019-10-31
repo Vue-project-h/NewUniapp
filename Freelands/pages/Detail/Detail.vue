@@ -1,14 +1,14 @@
 <template>
 	<view class="detail">
-		<image class="detail-img-fixd" src="https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png"></image>
+		<image class="detail-img-fixd" :src="detaildata.imgurl"></image>
 		
 		<view class="d-content">
 		</view>
-		.
+		
 		<view class="bg-white">
-			<DetailAuthor></DetailAuthor>
-			<ExproreText></ExproreText>
-			<DetailFooter></DetailFooter>
+			<DetailAuthor :authorname="detaildata.authorname"></DetailAuthor>
+			<ExproreText :text="detaildata.content" :title="detaildata.title"></ExproreText>
+			<DetailFooter :foot="detaildata.textfoot"></DetailFooter>
 			<PostComment></PostComment>
 			<view class="d-comment">
 				<view class="co-title">
@@ -34,11 +34,10 @@
 	import PostComment from '../../components/PostComment.vue'
 	import CommentItem from '../../components/CommentItem.vue'
 	export default {
-		onPageScroll: function(Object) { 
-		 // console.log(Object.scrollTop);//实时获取到滚动的值 if(0)
-		 // if(Object.scrollTop>0){
-			 
-		 // }
+		data(){
+			return {
+				detaildata:{},
+			}
 		},
 		components:{
 			DetailAuthor,
@@ -46,6 +45,16 @@
 			PostComment,
 			ExproreText,
 			CommentItem
+		},
+		
+		created(){
+			let data = JSON.parse(this.$route.query.detaildata);
+			// let data = this.$route.query;
+			
+			for(let index in data){
+				 this.detaildata[index]=data[index];
+			}
+			
 		}
 	}
 </script>

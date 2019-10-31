@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <view class="container"><editor class="ql-container" id="editor" placeholder="{{placeholder}}" data-event-opts="{{[['ready',[['onEditorReady',['$event']]]]]}}" bindready="__e"></editor><button type="warn" data-event-opts="{{[['tap',[['undo',['$event']]]]]}}" bindtap="__e">撤销</button></view>
+=======
+<view class="foc"><view class="focusenum">关注了1个人</view><focuse vue-id="1" bind:__l="__l"></focuse><view class="loaddata">已经加载全部数据</view></view>
+>>>>>>> master

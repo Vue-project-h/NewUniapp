@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "titleNView": {
+    "titleText": "全部日签"
+  },
+  "usingComponents": {
+    "day-sign": "/components/DaySign"
+  }
+}
