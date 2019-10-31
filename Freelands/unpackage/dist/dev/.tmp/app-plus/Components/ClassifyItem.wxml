@@ -1,0 +1,1 @@
+<view class="classifyitem"><view class="bg-img bg-mask flex align-center cli" style="{{'background:'+('url('+imgurl+')')+';'}}"><view class=" text-white"><view class=" text-xxl">{{''+clyname+''}}</view></view></view></view>

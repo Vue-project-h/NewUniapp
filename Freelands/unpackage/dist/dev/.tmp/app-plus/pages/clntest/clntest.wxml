@@ -1,0 +1,1 @@
+<view class="clntest" style="background:#fff;"><classify-item vue-id="1" bind:__l="__l"></classify-item><topic-item vue-id="2" bind:__l="__l"></topic-item><comment-item vue-id="3" bind:__l="__l"></comment-item><exprore-detail vue-id="4" bind:__l="__l"></exprore-detail></view>

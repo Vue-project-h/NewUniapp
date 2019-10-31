@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "detail-author": "/components/DetailAuthor",
+    "detail-footer": "/components/DetailFooter",
+    "post-comment": "/components/PostComment",
+    "exprore-text": "/components/ExproreText"
+  },
+  "component": true
+}

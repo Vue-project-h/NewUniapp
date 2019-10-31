@@ -1,6 +1,6 @@
 <template>
 	<view class="">
-	<scroll-view class="uni-slidingMenu solid-bottom shadow-warp" scroll-x >
+	<scroll-view class="uni-slidingMenu solid-bottom " scroll-x >
 		<view  :class="['slidingMenuList',activeIndex==index?'active':'']" v-for="(item, index) in list" :key="index" @click="getActive(index)" v-cloak>{{ item }}</view>
 	</scroll-view>
 	<view>
@@ -8,11 +8,14 @@
 			<swiper-item>
 				<view class="swiper-item list">
 					<view class="content">
-						<view class="text-area">
-							<DaySign></DaySign>
+						<view class="text-area ta" >
+							<DaySign ></DaySign>
+							<text class="more-daysign cuIcon-calendar" @click="handelMoreDaySign">
+								
+							</text>
 						</view>
 						<view class="item-list">
-							<Potery></Potery>
+							<Potery v-for="(item,index) in detaillist" :key="index" :detaildata="item"></Potery>
 						</view>
 						<view class="more">
 							<Topics></Topics>
@@ -46,7 +49,7 @@
 								
 								<text class="look-more" @click="handelMoreTopic">更多</text>
 							 </view>
-						 	<swiper class="card-swiper square-dot" :class="dotStyle?'square-dot':'round-dot'" :circular=true
+						 	<swiper class="card-swiper"  :circular=true 
 						 	 interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
 						 	 indicator-active-color="#0081ff">
 						 		<swiper-item v-for="(item,index) in swiperList" :key="index" :class="cardCur==index?'cur':''">
@@ -65,11 +68,9 @@
 						 		分类
 						 	</view>
 							<view class="classify-list">
-								<ClassifyItem></ClassifyItem>
-								<ClassifyItem></ClassifyItem>
-								<ClassifyItem></ClassifyItem>
-								<ClassifyItem></ClassifyItem>
-								<ClassifyItem></ClassifyItem>
+								
+								<ClassifyItem v-for="(item,index) in classifylist" :key="index" :clyname="item.clyname" :imgurl="item.imgurl"></ClassifyItem>
+								
 							</view>
 						 </view>
 						      
@@ -129,7 +130,9 @@
 				}],
 				dotStyle: false,
 				towerStart: 0,
-				direction: ''
+				direction: '',
+				detaillist:[],
+				classifylist:[]
 			}
 		},
 		components:{
@@ -148,9 +151,68 @@
 				let list = ".list";
 				_this.getlistHeight(list);
 			},10) 
+			
+			uni.getStorage({
+			    key: 'token',
+			    success: (res)=> {
+			        
+						uni.request({
+							url:this.base_url+"detaillisttoken",
+							method:'get',
+							data:{
+								'token':res.data
+							},
+							success: (res1) => {
+								// console.log(res1.data.data)
+								
+							}
+						})
+					
+			    }
+			});
+			
+			
+			uni.request({
+				url:this.base_url+"classfiylist",
+				method:'get',
+				
+				success: (resclassify) => {
+					
+					this.classifylist=resclassify.data.data
+					// console.log(this.classifylist)
+				}
+			})
+			
+			uni.request({
+				url:this.base_url+"detaillist",
+				method:'get',
+				
+				success: (resdetail) => {
+					
+					
+					this.detaillist=resdetail.data.data;
+					
+					console.log(this.detaillist);
+					
+				}
+			})
+			
+			
+			
 		},
 
 		methods: {
+			handelMoreDaySign(){
+				uni.navigateTo({
+					url:"/pages/daysign/daysign"
+				})
+			},
+			// handelDaySign(){
+			// 	console.log("DaySignDetail")
+			// 	uni.navigateTo({
+			// 		url:"/pages/daysign/DaySignDetail"
+			// 	})
+			// },
 			// swiper自适应高度
 			getlistHeight(list){
 					let _this = this
@@ -252,6 +314,16 @@
 </script>
 
 <style>
+	.ta {
+		position: relative;
+	}
+	.more-daysign{
+		position: absolute;
+		right: 40upx;
+		top: 10upx;
+		z-index: 2;
+		font-size: 40upx;
+	}
 	.content{
 		background: white;
 		padding-bottom:200upx ;
@@ -313,11 +385,11 @@
 		justify-content: space-between;
 	}
 	
-	.card-swiper uni-swiper-item {
-	    width: 80% !important;
+	/* .card-swiper uni-swiper-item {
+	    width: 650upx !important;
 	    padding:0px;
-		height:256upx
-	}
+		height:370upx
+	} */
 	.card-swiper {
 	    height: 300upx !important;
 	}
@@ -335,12 +407,12 @@
 		color: #2c2b32;
 		font-size: 30upx;
 	}
-	.screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
+	/* .screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
 	    width: 100%;
 	    display: block;
 	    height: 250upx;
 	    margin: 0;
 	    border-radius: 5px;
 	    pointer-events: none;
-	}
+	} */
 </style>

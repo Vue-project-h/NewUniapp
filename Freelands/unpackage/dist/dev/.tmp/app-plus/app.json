@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/clntest/clntest",
+    "pages/Detail/Detail",
+    "pages/moretopic/moretopic",
     "pages/foucse/foucse",
     "pages/create/create",
     "pages/my/my",
@@ -10,11 +13,13 @@
     "pages/my/Aboutus",
     "pages/login/login",
     "pages/login/register",
-    "pages/login/forget"
+    "pages/login/forget",
+    "pages/daysign/daysign",
+    "pages/daysign/DaySignDetail"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
+    "navigationBarTitleText": "",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
@@ -59,6 +64,6 @@
     "autoclose": false
   },
   "appname": "Freelands",
-  "compilerVersion": "2.3.3",
+  "compilerVersion": "2.3.7",
   "usingComponents": {}
 }

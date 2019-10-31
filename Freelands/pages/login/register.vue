@@ -12,25 +12,25 @@
 						v-model="phoneData"
 						type="text"
 						maxlength="11"
-						placeholder="手机号"
+						placeholder="设置昵称"
 					></wInput>
 					<wInput
 						v-model="passData"
 						type="password"
 						maxlength="11"
-						placeholder="登录密码"
+						placeholder="设置密码"
 						isShowPass
 					></wInput>
-					<wInput
+					<!-- <wInput
 						v-model="verCode"
 						type="number"
 						maxlength="4"
-						placeholder="验证码"
+						placeholder="确认登录"
 						
 						isShowCode
 						ref="runCode"
 						@setCode="getVerCode()"
-					></wInput>
+					></wInput> -->
 					
 				</view>
 				
@@ -124,35 +124,45 @@
 				    });
 				    return false;
 				}
-				if (this.phoneData.length !=11) {
+				if (this.phoneData.length <1) {
 				    uni.showToast({
 				        icon: 'none',
 						position: 'bottom',
-				        title: '手机号不正确'
+				        title: '请填写昵称'
 				    });
 				    return false;
 				}
-		        if (this.passData.length < 6) {
+		        if (this.passData.length < 1) {
 		            uni.showToast({
 		                icon: 'none',
 						position: 'bottom',
-		                title: '密码不正确'
+		                title: '请填写密码'
 		            });
 		            return false;
 		        }
-				if (this.verCode.length != 4) {
-				    uni.showToast({
-				        icon: 'none',
-						position: 'bottom',
-				        title: '验证码不正确'
-				    });
-				    return false;
-				}
-				console.log("注册成功")
+				
 				_this.isRotate=true
 				setTimeout(function(){
 					_this.isRotate=false
 				},3000)
+				
+				uni.request({
+					url:this.base_url+"users/register",
+					method:'POST',
+					data:{
+						"username":this.phoneData,
+						"pwd":this.passData,
+						"dis": '',
+					    "imgurl": '',
+					    "df1": '',
+					    "df2":''
+					},
+					
+					success: (res) => {
+						console.log(res)
+					}
+				})
+				
 		    }
 		}
 	}

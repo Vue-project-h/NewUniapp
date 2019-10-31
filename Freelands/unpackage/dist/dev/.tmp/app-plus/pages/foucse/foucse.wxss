@@ -1,38 +1,16 @@
 
-page{
-		background-color: #fafafa;
+.foc{
+	padding: 0 30rpx;
 }
-/* 滑动菜单栏的总内容区域 */
-.uni-slidingMenu {
-	width: 100%;
-	white-space: nowrap;
-	height: 100rpx;
-	background-color: #FFFFFF;
+.focusenum{
+	padding: 30rpx 0;
+	font-size: 26rpx;
+	color: #2e2f34;
 }
-/* 循环显示的菜单栏 */
-.slidingMenuList {
-	height: 100rpx;
-	line-height: 100rpx;
-	display: inline-block;
-	font-size: 24rpx;
-	margin-left: 80rpx;
-	color:#7d7778;
-}
-.slidingMenuList:last-child{
-	margin-right: 60rpx;
-}
-/* 点击选中菜单栏时的样式 */
-.active {
-	color: #414247;
-	font-size: 24rpx;
-	margin-left: 80rpx;
-	font-weight: 600;
-	border-bottom: 4rpx solid #000000;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-swiper-item{
-	min-height:50rpx;
-	background: red;
+.loaddata{
+	font-size: 22rpx;
+	color: #8a8686;
+	text-align: center;
+	padding: 20rpx 0;
 }
 

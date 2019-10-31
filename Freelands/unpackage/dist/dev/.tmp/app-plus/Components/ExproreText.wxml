@@ -1,0 +1,1 @@
+<view class="exproretext"><rich-text nodes="{{text}}"></rich-text></view>

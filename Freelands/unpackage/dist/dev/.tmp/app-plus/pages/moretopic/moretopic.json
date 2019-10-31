@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "titleNView": {
+    "titleText": "全部专题"
+  },
+  "usingComponents": {
+    "topic-item": "/components/TopicItem"
+  }
+}

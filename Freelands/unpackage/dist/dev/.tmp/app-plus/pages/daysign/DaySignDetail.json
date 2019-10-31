@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "titleNView": {
+    "titleText": "日签编辑"
+  },
+  "usingComponents": {}
+}

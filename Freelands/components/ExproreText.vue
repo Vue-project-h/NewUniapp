@@ -1,6 +1,7 @@
 <template>
 	<view class="exproretext">
-		<h1>诗歌标题</h1>
+		<rich-text :nodes="text"></rich-text>
+		<!-- <h1>诗歌标题</h1>
 		  <p><span style="font-size: x-small;">作者：张三</span></p>
 		  <h2><span style="font-size: x-small;">第一章</span></h2>
 		  <p><span style="font-size: x-small;">啦啦啦看看好吃</span></p>
@@ -14,11 +15,22 @@
 		  <p><span style="font-size: x-small;">那就是</span></p>
 		  <p><span style="font-size: x-small;">那时候</span></p>
 		  <p><img src="https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg" style="max-width:100%;"><span
-		      style="font-size: x-small;"><br></span></p>
+		      style="font-size: x-small;"><br></span></p> -->
 	</view>
 </template>
 
 <script>
+	export default{
+		data(){
+			return{
+				authordata:{}
+			}
+		},
+		props:{
+			text:String
+		},
+		
+	}
 </script>
 
 <style>
@@ -27,7 +39,7 @@
 		position: relative;
 		z-index: 2;
 	}
-	h1 {
+	 h1 {
 		font-size: 38upx;
 		color: #1a1a1a;
 		text-align: center;
@@ -44,6 +56,6 @@
 		text-align: justify;
 	}
 	.exproretext img {
-		
+		margin: 20upx 0;
 	}
 </style>

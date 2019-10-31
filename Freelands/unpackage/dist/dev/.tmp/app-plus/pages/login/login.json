@@ -1,7 +1,7 @@
 {
   "navigationStyle": "custom",
   "usingComponents": {
-    "w-input": "/Components/watch-input",
-    "w-button": "/Components/watch-button"
+    "w-input": "/components/watch-input",
+    "w-button": "/components/watch-button"
   }
 }

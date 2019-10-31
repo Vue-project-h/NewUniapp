@@ -1,11 +1,9 @@
 <template>
-	<view class="daysign">
+	<view class="daysign" @click="handelDaySign">
 		<image src="../../static/image/daysign.jpg" mode=""></image>
 		<view class='ds_day'>
 			<text>24</text>
 			<view class="ds_day_time">
-				
-			
 			<view class="year-m fz-24">
 				2019年10月
 			</view>
@@ -33,20 +31,48 @@
 		data(){
 			return {
 				data:{},
+				isAll:false
 			}
 		},
-		created() {
-			uni.request({
-				url: 'http://rap2api.taobao.org/app/mock/234629/get/daysign',
-				method: 'GET',
-				success: res => {
-					let arr=res.data.data.map((obj)=>{
-						obj.content=obj.content.split('。');
-						return obj
-					})
-					this.data=arr[0]
-				}
-			});
+		computed:{
+			data1(){
+				
+				return this.dsitem?this.dsitem:this.data;
+			}
+		},
+		props:{
+			dsitem:Object
+		},
+		mounted() {
+			
+			// // console.log(this.dsitem)
+			// if(this.dsitem!==undefined){
+			// 	console.log("dsitem")
+			// }else{
+				uni.request({
+					url: 'http://rap2api.taobao.org/app/mock/234629/get/daysign',
+					method: 'GET',
+					success: res => {
+						let arr=res.data.data.map((obj)=>{
+							obj.content=obj.content.split('。');
+							return obj
+						})
+						this.data=arr[0]
+					}
+				});
+			// }
+			
+		},
+		methods:{
+			handelDaySign(){
+				// console.log("DaySignDetail")
+				// console.log(this.data1)
+				
+				 var navData = encodeURIComponent(JSON.stringify(this.data));
+				uni.navigateTo({
+					url:"/pages/daysign/DaySignDetail?data="+navData
+				})
+			},
 		}
 	}
 </script>
@@ -60,6 +86,7 @@
 		// background: red;
 		font-family: '楷体';
 		position: relative;
+		margin-bottom: 30upx;
 		image{
 			width: 100%;
 			height: 100%;

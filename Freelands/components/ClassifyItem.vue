@@ -1,11 +1,12 @@
 <template>
 	<view class="classifyitem">
-		<view class="bg-img bg-mask flex align-center" style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg');">
+		<view class="bg-img bg-mask flex align-center cli"
+		:style="{background:'url('+imgurl+')'}"
+		>
 			<view class=" text-white">
 				<view class=" text-xxl">
-					钢铁之翼
+					{{clyname}}
 				</view>
-				
 			</view>
 		</view>
 	</view>
@@ -17,18 +18,22 @@
 			return {
 				
 			};
+		},
+		props:{
+			clyname:String,
+			imgurl:String
 		}
 	}
 </script>
 
 <style>
-	.classifyitem >uni-view {
+	.classifyitem .cli {
 		width: 330upx;
 		height: 290upx;
 		border-radius: 15upx;
 		margin-bottom: 34upx;
 	}
-	.bg-mask uni-view{
+	.bg-mask .text-white{
 		width: 100%;
 		text-align: center;
 		color: #fdfeff;

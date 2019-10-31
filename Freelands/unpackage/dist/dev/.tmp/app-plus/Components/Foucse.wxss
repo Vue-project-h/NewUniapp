@@ -1,0 +1,45 @@
+
+.foucse{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.fc-content{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.nownotice{
+	padding: 20rpx 30rpx;
+	font-size: 22rpx;
+	font-weight: 500;
+	color: #fff;
+	background: #404146;
+	border-radius: 10rpx;
+}
+.head-img1{
+	width: 125rpx;
+	height: 125rpx;
+	border-radius: 50%;
+	border: 1px sollid #353535;
+}
+.a-name1{
+	margin-left: 32rpx;
+	font-size: 20rpx;
+	color: #404146;
+}
+

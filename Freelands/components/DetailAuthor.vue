@@ -1,33 +1,65 @@
 <template>
 	<view class="author">
 		<view class="title">
-			惰性的道德
+			{{authordata.title}}
 		</view>
 		
 			<view class="cu-item">
-				<view class="cu-avatar round head-img" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+				<view class="cu-avatar round head-img" 
+				:style="{background:'url('+authordata.imgurl+')'}"></view>
 				
 				<view class="content">
-					<view class="text-grey a-name">莫甘娜</view>
+					<view class="text-grey a-name">{{authorname}}</view>
 					<view class=" flex justify-between">
 						<view class="text-gray text-df date-text">2018年12月4日</view>	
 					</view>
 				</view>
 				
-				<text class="notice">关注</text>
+				<text class="notice noticecheck">关注</text>
 			</view>
 			<view class="a-img shadow">
-				<image src="https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png"></image>
+				<image :src="authordata.imgurl"></image>
 			</view>
 			<view class="a-dis">
-				你可降低I哦哦佛SNF解耦经济偶在家吃建瓯盘进场来自建瓯市到家了理论基础咯啊好很多了来哦真的很懒
-				理论基础咯啊好很多了来哦真的很懒
+				{{authordata.dis}}
 			</view>
 		
 	</view>
 </template>
 
 <script>
+	export default{
+		data(){
+			return{
+				authordata:{}
+			}
+		},
+		props:{
+			authorname:String
+		},
+		created(){
+			console.log(this.authorname)
+			uni.request({
+				url:this.base_url+"author/list",
+				method:'get',
+				
+				success: (resdetail) => {
+					
+					
+					let authorlist=resdetail.data.data;
+					
+					
+					authorlist.forEach((val)=>{
+						if(val.name==this.authorname){
+							this.authordata=val;
+						}
+					})
+					console.log(this.authordata);
+					// this.authordata=
+				}
+			})
+		}
+	}
 </script>
 
 <style>
@@ -78,5 +110,15 @@
 		padding: 6upx;
 		border: 1px solid #1e1e1e;
 		border-radius: 21upx;
+	}
+	.noticecheck {
+		position: absolute;
+		right: 30upx;
+		line-height: 30upx;
+		padding: 6upx;
+		border: 1px solid #1e1e1e;
+		border-radius: 21upx;
+		color: gray;
+		background: #1e1e1e;
 	}
 </style>

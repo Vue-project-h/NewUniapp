@@ -1,0 +1,26 @@
+
+.exproretext{
+	padding: 0 30rpx;
+	position: relative;
+	z-index: 2;
+}
+._h1 {
+	font-size: 38rpx;
+	color: #1a1a1a;
+	text-align: center;
+}
+.exproretext ._p:nth-of-type(1){
+	font-size: 28rpx;
+	color: #a2a2a2;
+	text-align: center;
+}
+.exproretext ._span,._p {
+	font-size: 30rpx;
+	color: #232323;
+	line-height: 40rpx;
+	text-align: justify;
+}
+.exproretext ._img {
+	margin: 20rpx 0;
+}
+

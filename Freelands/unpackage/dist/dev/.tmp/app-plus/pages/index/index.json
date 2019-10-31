@@ -1,8 +1,9 @@
 {
   "navigationStyle": "custom",
   "usingComponents": {
-    "day-sign": "/Components/DaySign",
-    "potery": "/Components/Potery",
-    "topics": "/Components/MyTopics"
+    "day-sign": "/components/DaySign",
+    "potery": "/components/Potery",
+    "topics": "/components/MyTopics",
+    "classify-item": "/components/ClassifyItem"
   }
 }

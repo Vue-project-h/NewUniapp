@@ -1,0 +1,24 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "titleNView": {
+    "buttons": [
+      {
+        "color": "#57585c",
+        "colorPressed": "#57585c",
+        "float": "right",
+        "fontSize": "22px",
+        "fontWeight": "bold",
+        "fontSrc": "/static/iconfont.ttf",
+        "text": ""
+      }
+    ]
+  },
+  "usingComponents": {
+    "detail-author": "/components/DetailAuthor",
+    "detail-footer": "/components/DetailFooter",
+    "post-comment": "/components/PostComment",
+    "exprore-text": "/components/ExproreText",
+    "comment-item": "/components/CommentItem"
+  }
+}
