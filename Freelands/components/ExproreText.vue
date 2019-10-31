@@ -33,16 +33,20 @@
 	}
 </script>
 
-<style>
+<style scoped lang="scss">
 	.exproretext{
 		padding: 0 30upx;
 		position: relative;
 		z-index: 2;
+		img{
+			padding: 20upx 0;
+		}
 	}
 	 h1 {
 		font-size: 38upx;
 		color: #1a1a1a;
 		text-align: center;
+		font-weight: 500;
 	}
 	.exproretext p:nth-of-type(1){
 		font-size: 28upx;

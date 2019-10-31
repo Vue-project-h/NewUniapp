@@ -12,12 +12,8 @@
 		},
 		onLaunch: function() {
 			let _this=this;
-			console.log(1)
 			try {
-				console.log(2)
 			   const myinfo = uni.getStorageSync('userinfo');
-			   console.log(3)
-			   console.log(myinfo)
 			    if (myinfo) {
 			        _this.$options.globalData.userinfo = myinfo.userinfo;
 			    }

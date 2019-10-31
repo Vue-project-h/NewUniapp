@@ -144,9 +144,6 @@
 	width: 185upx;
 	height: 185upx;
 }
-.content-left{
-	
-}
 .content-title{
 	font-size: 30upx;
 	font-weight: 800;

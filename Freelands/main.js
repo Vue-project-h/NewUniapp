@@ -7,13 +7,10 @@ import './static/css/animation.css'
 
 
 Vue.config.productionTip = false
-<<<<<<< HEAD
-Vue.prototype.base_url="http://localhost:3000"
+// Vue.prototype.base_url="http://localhost:3000"
 
 
-=======
 Vue.prototype.base_url="http://localhost:3008/"
->>>>>>> master
 App.mpType = 'app'
 
 const app = new Vue({

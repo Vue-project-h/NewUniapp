@@ -5,7 +5,6 @@
 			"style": {
 				"navigationStyle": "custom"
 			}
-<<<<<<< HEAD
 		}, {
 			"path": "pages/clntest/clntest",
 			"style": {}
@@ -35,12 +34,10 @@
 			"path": "pages/moretopic/moretopic",
 			"style": {
 				"enablePullDownRefresh": true,
-				"navigationBarBackgroundColor": "#ffffff",
-=======
+				"navigationBarBackgroundColor": "#ffffff"
+			}
 		},
-		
-	    
-        {
+		{
             "path" : "pages/clntest/clntest",
             "style" : {}
         }
@@ -49,7 +46,6 @@
             "style" : {
 				"enablePullDownRefresh":true,
 				"navigationBarBackgroundColor":"#ffffff",
->>>>>>> master
 				"app-plus": {
 					"titleNView": {
 
@@ -90,8 +86,6 @@
 				    }
 				}
 			}
-<<<<<<< HEAD
-=======
         }
         
         ,{
@@ -114,7 +108,6 @@
 				"enablePullDownRefresh":true,
 				"navigationBarTitleText":"我的关注"
 		    }
->>>>>>> master
 		},
 		{
 			"path": "pages/my/my",
@@ -175,12 +168,10 @@
 				"navigationStyle": "custom"
 			}
 		}
-<<<<<<< HEAD
 	    ,{
             "path" : "pages/edit/edit",
             "style" : {}
         }
-=======
         ,{
             "path" : "pages/daysign/daysign",
             "style" : {
@@ -189,18 +180,6 @@
             	"app-plus": {
             	    "titleNView": {
             	        "titleText":"全部日签"
-        //     	        "buttons": [
-        //     	        {
-        //     	             "color": "#1a1a1a",
-        //     	             "colorPressed": "#1a1a1a",
-        //     	             "float": "left",
-        //     	             "fontSize": "16px",
-        //     				 "fontWeight":"bold",
-							 
-        //     	             "fontSrc": "/static/iconfont.ttf", // 字体文件
-        //     	             "text": "全部日签" // 字体图标\u 开头，加上字体图标unicode后面四位
-        //     	        }
-        //     	        ]
             	    }
             	}
             }
@@ -220,7 +199,6 @@
 				}
 			}
 		}
->>>>>>> master
     ],
 
 	"globalStyle": {

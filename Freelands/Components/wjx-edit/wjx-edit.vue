@@ -390,7 +390,4 @@
 		vertical-align: middle;
 	}
 
-	.input-content {
-		min-height: ;
-	}
 </style>

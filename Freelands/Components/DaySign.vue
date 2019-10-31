@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
-	<view class="daysign ">
-=======
 	<view class="daysign" @click="handelDaySign">
->>>>>>> master
 		<image src="../../static/image/daysign.jpg" mode=""></image>
 		<view class='ds_day'>
 			<text>24</text>
