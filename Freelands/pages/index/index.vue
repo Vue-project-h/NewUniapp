@@ -1,20 +1,24 @@
 <template>
 	<view class="">
-	<scroll-view class="uni-slidingMenu solid-bottom " scroll-x >
-		<view  :class="['slidingMenuList',activeIndex==index?'active':'']" v-for="(item, index) in list" :key="index" 
-		@click="getActive(index)" v-cloak>{{ item }}</view>
+		<view class="preventCollapse">
+			
+		</view>
+	<scroll-view class="uni-slidingMenu solid-bottom addSD  " scroll-x >
+		<view  class="fontSizeSet " :class="['slidingMenuList',activeIndex==index?'active':'']" v-for="(item, index) in list" :key="index" @click="getActive(index)" v-cloak>{{ item }}</view>
 	</scroll-view>
-	<view>
+	<view class="index-content ">
 		<swiper @change="handelSlide" :current='activeIndex'   :style="{height:swiperHeight+'px'}">
 			<swiper-item>
-				<view class="swiper-item list">
+				<view class="swiper-item  list">
 					<view class="content">
-						<view class="text-area ta" >
-							<DaySign ></DaySign>
+						<view class="text-area padding-top shadow-blur ta">
+							<DaySign></DaySign>
 							<text class="more-daysign cuIcon-calendar" @click="handelMoreDaySign">
 								
 							</text>
 						</view>
+						<!-- box-shadow: 3px 3px 4px rgba(26, 26, 26, 0.2); -->
+						<!-- box-shadow:0px 10px 5px #000; -->
 						<view class="item-list">
 							<Potery v-for="(item,index) in detaillist" :key="index" :detaildata="item"></Potery>
 						</view>
@@ -141,7 +145,7 @@
 			'DaySign':DaySign,
 			'Potery':Potery,
 			'Topics':Topics,
-			ClassifyItem,
+			'ClassifyItem':ClassifyItem,
 		},
 		onLoad() {
 			this.TowerSwiper('swiperList');
@@ -149,7 +153,10 @@
 			
 		},
 		onShow() {
-			// this.getlistHeight(".list")
+			let attr=getApp().globalData.userinfo;
+			console.log('***')
+			console.log(attr)
+			console.log('***')
 			let _this = this;
 			
 			
@@ -321,7 +328,15 @@
 	}
 </script>
 
+
 <style>
+	
+	.fontSizeSet{
+		font-size: 30upx !important;
+	}
+	.preventCollapse{
+		height: var(--status-bar-height);
+	}
 	.ta {
 		position: relative;
 	}
@@ -372,10 +387,6 @@
 		border-bottom: 4rpx solid #000000;
 		box-sizing: border-box;
 	}
-	swiper-item{
-		/* min-height:50upx ; */
-		/* background: red; */
-	}
 	
 	
 	.exprore {
@@ -404,7 +415,7 @@
 	.ti-more {
 		display: flex;
 		justify-content: space-between;
-		pos-bottom: 20upx;
+		padding-bottom: 20upx;
 	}
 	.look-more {
 		font-size: 30upx;

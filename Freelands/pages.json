@@ -1,14 +1,43 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [ 
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationStyle": "custom"
 			}
+		}, {
+			"path": "pages/clntest/clntest",
+			"style": {}
+		}, {
+			"path": "pages/Detail/Detail",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#ffffff",
+				"app-plus": {
+					"titleNView": {
+
+						"buttons": [{
+							"color": "#57585c",
+							"colorPressed": "#57585c",
+							"float": "right",
+							"fontSize": "22px",
+							"fontWeight": "bold",
+							"fontSrc": "/static/iconfont.ttf", 
+							"text": "\ue606" 
+						}]
+					}
+				}
+			}
+		}
+
+		, {
+			"path": "pages/moretopic/moretopic",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#ffffff"
+			}
 		},
-		
-	    
-        {
+		{
             "path" : "pages/clntest/clntest",
             "style" : {}
         }
@@ -18,18 +47,41 @@
 				"enablePullDownRefresh":true,
 				"navigationBarBackgroundColor":"#ffffff",
 				"app-plus": {
-				    "titleNView": {
-				        
-				        "buttons": [
-				        {
-				             "color": "#57585c",
-				             "colorPressed": "#57585c",
-				             "float": "right",
-				             "fontSize": "22px",
-							 "fontWeight":"bold",
-				             "fontSrc": "/static/iconfont.ttf", // 字体文件
-				             "text": "\ue606" // 字体图标\u 开头，加上字体图标unicode后面四位
-				        }
+					"titleNView": {
+
+						"buttons": [{
+							"color": "#1a1a1a",
+							"colorPressed": "#1a1a1a",
+							"float": "left",
+							"fontSize": "16px",
+							"fontWeight": "bold",
+							"fontSrc": "/static/iconfont.ttf", 
+							"text": "全部专题" 
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/foucse/foucse",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/create/create",
+			"style": {
+				"navigationBarTitleText": "热门",
+				"app-plus" : {
+				    "titleNView" : {
+				        "buttons" : [
+				            {
+				                "type" : "none",
+				                "text" : "创作",
+				                "color" : "red",
+				                "float" : "right",
+				                "fontSize" : "14px"
+				            }
 				        ]
 				    }
 				}
@@ -71,63 +123,68 @@
 		    }
 		},
 		{
-		    "path" : "pages/create/create",
-		    "style": {
-		    	"navigationStyle": "custom"
-		    }
+			"path": "pages/my/my",
+			"style": {
+				"navigationStyle": "custom"
+			}
 		},
 		{
-		    "path" : "pages/my/my",
-		    "style": {
-		    	"navigationStyle": "custom"
-		    }
+			"path": "pages/my/Setting",
+			"style": {
+				"navigationStyle": "default",
+				"navigationBarTitleText": "设置"
+			}
 		},
 		{
-		    "path" : "pages/my/Setting",
-		    "style": {
-		    	"navigationStyle": "default",
-				"navigationBarTitleText":"设置"
-		    }
+			"path": "pages/my/Sendemail",
+			"style": {
+				"navigationStyle": "default",
+				"navigationBarTitleText": "反馈信息"
+			}
 		},
 		{
-		    "path" : "pages/my/Sendemail",
-		    "style": {
-		    	"navigationStyle": "default",
-				"navigationBarTitleText":"反馈信息"
-		    }
+			"path": "pages/my/Userinfo",
+			"style": {
+				"navigationStyle": "default",
+				"navigationBarTitleText": "用户协议"
+			}
 		},
 		{
-		    "path" : "pages/my/Userinfo",
-		    "style": {
-		    	"navigationStyle": "default",
-				"navigationBarTitleText":"用户协议"
-		    }
+			"path": "pages/my/Aboutus",
+			"style": {
+				"navigationStyle": "default",
+				"navigationBarTitleText": "关于我们"
+			}
 		},
 		{
-		    "path" : "pages/my/Aboutus",
-		    "style": {
-		    	"navigationStyle": "default",
-				"navigationBarTitleText":"关于我们"
-		    }
+			"path": "pages/my/Goviews",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": ""
+			}
 		},
 		{
-		    "path" : "pages/login/login",
-		    "style": {
-		    	"navigationStyle": "custom"
-		    }
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+			}
 		},
 		{
-		    "path" : "pages/login/register",
-		    "style": {
-		    	"navigationStyle": "custom"
-		    }
+			"path": "pages/login/register",
+			"style": {
+				"navigationStyle": "custom"
+			}
 		},
 		{
-		    "path" : "pages/login/forget",
-		    "style": {
-		    	"navigationStyle": "custom"
-		    }
+			"path": "pages/login/forget",
+			"style": {
+				"navigationStyle": "custom"
+			}
 		}
+	    ,{
+            "path" : "pages/edit/edit",
+            "style" : {}
+        }
         ,{
             "path" : "pages/daysign/daysign",
             "style" : {
@@ -136,18 +193,6 @@
             	"app-plus": {
             	    "titleNView": {
             	        "titleText":"全部日签"
-        //     	        "buttons": [
-        //     	        {
-        //     	             "color": "#1a1a1a",
-        //     	             "colorPressed": "#1a1a1a",
-        //     	             "float": "left",
-        //     	             "fontSize": "16px",
-        //     				 "fontWeight":"bold",
-							 
-        //     	             "fontSrc": "/static/iconfont.ttf", // 字体文件
-        //     	             "text": "全部日签" // 字体图标\u 开头，加上字体图标unicode后面四位
-        //     	        }
-        //     	        ]
             	    }
             	}
             }
@@ -168,7 +213,7 @@
 			}
 		}
     ],
-	
+
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "",
@@ -176,37 +221,37 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-	    "color": "#7A7E83",
-	    "selectedColor": "#3cc51f",
-	    "borderStyle": "black",
-		"height":"80upx",
-	    "backgroundColor": "#ffffff",
-		"color":"#8b8687",
-		"selectedColor":"#404146",
-		"fontSize":"58upx",
-	    "list": [{
-	        "pagePath": "pages/index/index",
-	        "iconPath": "static/image/tapbar_1_03.jpg",
-	        "selectedIconPath": "static/image/tapbar_1_active.jpg",
-	        "text": "首页"
-	    }, {
-	        "pagePath": "pages/foucse/foucse",
-	        "iconPath": "static/image/tapbar_2.jpg",
-	        "selectedIconPath": "static/image/tapbar_2_active_03.jpg",
-	        "text": "关注"
-	    },
-		{
-		    "pagePath": "pages/create/create",
-		    "iconPath": "static/image/tapbar_3.jpg",
-		    "selectedIconPath": "static/image/tapbar_3_active_03.jpg",
-		    "text": "创作"
-		},
-		{
-		    "pagePath": "pages/my/my",
-		    "iconPath": "static/image/tapbar_4.jpg",
-		    "selectedIconPath": "static/image/tapbar_4_active_03.jpg",
-		    "text": "我"
-		}
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"height": "80upx",
+		"backgroundColor": "#ffffff",
+		"color": "#8b8687",
+		"selectedColor": "#404146",
+		"fontSize": "58upx",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/image/tapbar_1_03.jpg",
+				"selectedIconPath": "static/image/tapbar_1_active.jpg",
+				"text": "首页"
+			}, {
+				"pagePath": "pages/foucse/foucse",
+				"iconPath": "static/image/tapbar_2.jpg",
+				"selectedIconPath": "static/image/tapbar_2_active_03.jpg",
+				"text": "关注"
+			},
+			{
+				"pagePath": "pages/create/create",
+				"iconPath": "static/image/tapbar_3.jpg",
+				"selectedIconPath": "static/image/tapbar_3_active_03.jpg",
+				"text": "创作"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/image/tapbar_4.jpg",
+				"selectedIconPath": "static/image/tapbar_4_active_03.jpg",
+				"text": "我"
+			}
 		]
 	}
 }

@@ -12,11 +12,16 @@
     "pages/my/Sendemail",
     "pages/my/Userinfo",
     "pages/my/Aboutus",
+    "pages/my/Goviews",
     "pages/login/login",
     "pages/login/register",
     "pages/login/forget",
+<<<<<<< HEAD
+    "pages/edit/edit"
+=======
     "pages/daysign/daysign",
     "pages/daysign/DaySignDetail"
+>>>>>>> master
   ],
   "window": {
     "navigationBarTextStyle": "black",

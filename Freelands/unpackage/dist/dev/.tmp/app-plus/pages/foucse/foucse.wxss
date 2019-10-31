@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+.container {
+    padding: 10px;
+}
+#editor {
+    width: 100%;
+    height: 300px;
+    background-color: #CCCCCC;
+}
+button {
+    margin-top: 10px;
+=======
 .foc{
 	padding: 0 30rpx;
 }
@@ -12,5 +24,6 @@
 	color: #8a8686;
 	text-align: center;
 	padding: 20rpx 0;
+>>>>>>> master
 }
 

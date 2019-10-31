@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+.addSD{
+	/* box-shadow:0px 5px 2px #000; */
+}
+.fontSizeSet{
+	font-size: 30rpx !important;
+}
+.preventCollapse{
+	height: var(--status-bar-height);
+=======
 .ta {
 	position: relative;
 }
@@ -8,6 +18,7 @@
 	top: 10rpx;
 	z-index: 2;
 	font-size: 40rpx;
+>>>>>>> master
 }
 .content{
 	background: white;
@@ -77,11 +88,27 @@ swiper-item{
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
+<<<<<<< HEAD
 .card-swiper uni-swiper-item {
     width: 650rpx !important;
     padding:0px;
 	height:370rpx
 }
+=======
+<<<<<<< HEAD
+.card-swiper uni-swiper-item {
+    width: 80% !important;
+    padding:0px;
+	height:256rpx
+}
+=======
+/* .card-swiper uni-swiper-item {
+    width: 650upx !important;
+    padding:0px;
+	height:370upx
+} */
+>>>>>>> master
+>>>>>>> origin
 .card-swiper {
     height: 300rpx !important;
 }
@@ -103,6 +130,17 @@ swiper-item{
 .img-text {
 	color: #2c2b32;
 	font-size: 30rpx;
+<<<<<<< HEAD
+}
+.screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
+    width: 100%;
+    display: block;
+    height: 250rpx;
+    margin: 0;
+    border-radius: 5px;
+    pointer-events: none;
+}
+=======
 }
 .screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
     width: 85%;
@@ -115,4 +153,5 @@ swiper-item{
 /* .card-swiper uni-swiper-item {
 	padding: 0;
 } */
+>>>>>>> master
 

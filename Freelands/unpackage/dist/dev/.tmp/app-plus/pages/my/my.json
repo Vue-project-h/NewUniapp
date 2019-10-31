@@ -1,6 +1,11 @@
 {
   "navigationStyle": "custom",
   "usingComponents": {
+<<<<<<< HEAD
+    "my-login": "/components/Logins",
+    "my-info": "/components/MyInfo"
+=======
     "my-login": "/components/Logins"
+>>>>>>> master
   }
 }

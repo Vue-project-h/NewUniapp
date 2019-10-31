@@ -1,4 +1,15 @@
 {
-  "navigationStyle": "custom",
+  "navigationBarTitleText": "热门",
+  "titleNView": {
+    "buttons": [
+      {
+        "type": "none",
+        "text": "创作",
+        "color": "red",
+        "float": "right",
+        "fontSize": "14px"
+      }
+    ]
+  },
   "usingComponents": {}
 }

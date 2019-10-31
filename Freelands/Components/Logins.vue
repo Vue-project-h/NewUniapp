@@ -1,23 +1,6 @@
 <template>
 	<view class="">
-		<scroll-view scroll-x class="bg-green nav text-center my-nav ">
-			<view class="cu-item fl" >
-				<text class="cuIcon-notice"></text> 
-			</view>
-			<view class="fr">
-				<navigator url="Sendemail" hover-class="navigator-hover" class="fr">
-					<view class="cu-item" >
-						<text class="cuIcon-mail"></text> 
-					</view>
-					</navigator>
-				
-				<navigator url="Setting" hover-class="navigator-hover" class="fr">
-				            <view class="cu-item" @click="handeljump-setting">
-				            	<text class="cuIcon-settings"></text> 
-				            </view>   
-				                </navigator>
-			</view>
-		</scroll-view>
+		
 		<view class="login-content">
 			<view class="My-login">
 				<image src="../../static/image/login_03.jpg" mode=""></image>
@@ -27,7 +10,7 @@
 			</view>
 			
 			<navigator url="../login/login" hover-class="navigator-hover">
-			    <view class="cu-btn round lg  bg-black btn-addpd shadow">
+			    <view class="cu-btn round lg  bg-black btn-addpd shadow my-btns">
 			        登录
 			    </view>
 			</navigator>
@@ -61,7 +44,7 @@
 			position: relative;
 			top:var(--status-bar-height);
 			background-color:transparent;
-			color: white;
+			/* color: white; */
 			font-weight: 900;
 			font-size: 50upx;
 		}
@@ -94,5 +77,9 @@
 	}
 	.btn-addpd{
 		padding:  10upx 20upx;
+	}
+	.my-btns{
+		width: 300upx;
+		height: 80upx;
 	}
 </style>

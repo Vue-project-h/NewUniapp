@@ -12,7 +12,7 @@
 	-webkit-align-items: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	border-bottom: 2px solid #dfdfdf;
+	border-bottom: 1px solid #dfdfdf;
 }
 .user-icon{
 	width: 65rpx;
@@ -27,12 +27,13 @@
 .content-title{
 	font-size: 30rpx;
 	font-weight: 800;
-	padding-bottom: 25rpx;
+	padding-bottom: 20rpx;
 }
 .content-write{
-	padding-bottom: 35rpx;
+	padding-bottom: 30rpx;
 	color: #858080;
 	line-height: 40rpx;
+	font-size: 26rpx;
 }
 .coontent-userinfo{
 	display: -webkit-box;
