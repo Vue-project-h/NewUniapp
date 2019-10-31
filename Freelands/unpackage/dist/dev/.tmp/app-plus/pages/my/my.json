@@ -1,6 +1,7 @@
 {
   "navigationStyle": "custom",
   "usingComponents": {
-    "my-login": "/Components/Logins"
+    "my-login": "/components/Logins",
+    "my-info": "/components/MyInfo"
   }
 }

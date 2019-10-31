@@ -1,0 +1,24 @@
+
+.head-img {
+	width: 74rpx;
+	height: 74rpx;
+}
+.cu-list.menu-avatar>.cu-item .content>uni-view:first-child{
+	color:#424348;
+	font-size: 20rpx;
+}
+.date-text {
+	color: #878283;
+	font-size: 20rpx;
+}
+.comment-bgc {
+	background-color:#fff;
+}
+.reapet-box {
+	border:1px solid #8b8687;
+	color:#404146;
+}
+.text-co{
+	color:#404146;
+}
+

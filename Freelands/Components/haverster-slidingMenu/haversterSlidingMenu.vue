@@ -1,5 +1,5 @@
 <template>
-	<scroll-view class="uni-slidingMenu solid-bottom shadow-warp" scroll-x >
+	<scroll-view class="uni-slidingMenu solid-bottom " scroll-x >
 		<view  :class="['slidingMenuList',activeIndex==index?'active':'']" v-for="(item, index) in list" :key="index" @click="getActive(index)" v-cloak>{{ item }}</view>
 	</scroll-view>
 </template>

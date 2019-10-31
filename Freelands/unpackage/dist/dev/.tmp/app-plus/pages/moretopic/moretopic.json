@@ -1,0 +1,20 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "titleNView": {
+    "buttons": [
+      {
+        "color": "#1a1a1a",
+        "colorPressed": "#1a1a1a",
+        "float": "left",
+        "fontSize": "16px",
+        "fontWeight": "bold",
+        "fontSrc": "/static/iconfont.ttf",
+        "text": "全部专题"
+      }
+    ]
+  },
+  "usingComponents": {
+    "topic-item": "/components/TopicItem"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "classify-item": "/components/ClassifyItem",
+    "topic-item": "/components/TopicItem",
+    "comment-item": "/components/CommentItem",
+    "exprore-detail": "/components/ExproreDetail",
+    "post-comment": "/components/PostComment",
+    "detail-footer": "/components/DetailFooter"
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-	<view class="daysign">
+	<view class="daysign ">
 		<image src="../../static/image/daysign.jpg" mode=""></image>
 		<view class='ds_day'>
 			<text>24</text>
@@ -53,7 +53,9 @@
 
 <style lang="scss">
 	.daysign{
+		   box-shadow: rgba(26, 26, 26, 0.2) 0px 0px 5px 2px;
 		// width: 680upx;
+		
 		text-shadow:3px 2px 4px  #6a898e;
 		margin: 0 35upx;
 		height: 500upx;

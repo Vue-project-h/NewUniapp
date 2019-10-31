@@ -1,0 +1,14 @@
+
+.classifyitem .addwh {
+	width: 330rpx;
+	height: 290rpx;
+	border-radius: 15rpx;
+	margin-bottom: 34rpx;
+}
+.classifyitem .text-alignss{
+	width: 100% !important;
+	text-align: center;
+	color: #fdfeff;
+	font-size: 34rpx;
+}
+

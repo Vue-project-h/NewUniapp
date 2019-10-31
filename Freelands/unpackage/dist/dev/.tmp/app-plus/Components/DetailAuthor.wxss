@@ -1,0 +1,52 @@
+
+.author{
+	padding: 30rpx;
+}
+.title{
+	font-size: 48rpx;
+	color: #000;
+	font-weight: 700;
+	font-family: "\5B8B\4F53";
+	margin: 50rpx 0;
+}
+.cu-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.head-img {
+	margin-right: 20rpx;
+	width: 70rpx;
+	height: 70rpx;
+}
+.content {
+	font-size: 22rpx;
+}
+.a-img {
+	width: 100%;	
+	text-align: center;
+	border-bottom: 1px solid #eaeaea;
+}
+.a-img image {
+	margin-top: 130rpx;
+	width: 325rpx;
+	height: 325rpx;
+	vertical-align: middle;
+	margin-bottom: 1rpx;
+}
+.a-dis {
+	margin-top: 60rpx;
+	color: #a3a3a3;
+	font-size: 24rpx;
+	line-height: 30rpx;
+}
+.notice {
+	position: absolute;
+	right: 30rpx;
+	line-height: 30rpx;
+	padding: 6rpx;
+	border: 1px solid #1e1e1e;
+	border-radius: 21rpx;
+}
+

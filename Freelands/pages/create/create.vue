@@ -119,6 +119,12 @@
 		},
 		methods: {
 			
+		},
+		onNavigationBarButtonTap(){
+			uni.navigateTo({
+			    url: '../edit/edit'
+			});
+			
 		}
 	}
 </script>
@@ -128,7 +134,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 2px solid #dfdfdf;
+	border-bottom: 1px solid #dfdfdf;
 }
 .user-icon{
 	width: 65upx;
@@ -144,13 +150,15 @@
 .content-title{
 	font-size: 30upx;
 	font-weight: 800;
-	padding-bottom: 25upx;
+	padding-bottom: 20upx;
 }
 .content-write{
-	padding-bottom: 35upx;
+	padding-bottom: 30upx;
 	color: #858080;
 	line-height: 40upx;
+	font-size: 26upx;
 }
+
 .coontent-userinfo{
 	display: flex;
 	align-items: center;

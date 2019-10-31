@@ -25,6 +25,8 @@
 /* 透明度 */
 /* 文章场景相关 */
 .daysign {
+  -webkit-box-shadow: rgba(26, 26, 26, 0.2) 0px 0px 5px 2px;
+          box-shadow: rgba(26, 26, 26, 0.2) 0px 0px 5px 2px;
   text-shadow: 3px 2px 4px  #6a898e;
   margin: 0 35rpx;
   height: 500rpx;

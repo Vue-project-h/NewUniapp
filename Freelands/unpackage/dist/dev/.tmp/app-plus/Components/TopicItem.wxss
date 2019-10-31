@@ -1,0 +1,27 @@
+
+.classifyitem {
+margin-bottom: 30rpx;
+}
+.classifyitem >uni-view {
+	width: 690rpx;
+	height: 380rpx;
+	border-radius: 10rpx;
+}
+.bg-mask .title-text{
+	width: 100%;
+	text-align: center;
+	color: #fdfeff;
+	font-size: 44rpx;
+	margin-bottom: 20rpx;
+}
+.dis-text {
+	color: #fcfcfe;
+	font-size: 24rpx;
+	text-align: center;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	padding: 0 60rpx;
+}
+

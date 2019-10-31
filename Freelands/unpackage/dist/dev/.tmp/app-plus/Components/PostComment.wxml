@@ -1,0 +1,1 @@
+<view class="postcommen"><input class="inp-text" type="text" placeholder="发表评论" placeholder-class="pla-style"/><view class="pos-msg"><text class="cuIcon-message po-icon"></text><text>1</text></view><text class="cuIcon-like po-icon"></text></view>

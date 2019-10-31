@@ -1,0 +1,39 @@
+
+.postcommen{
+	
+	z-index: 2;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #e7e7e7;
+	line-height: 98rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.inp-text {
+	width: 486rpx;
+	height: 60rpx;
+	border: 1px solid #bcbcbc;
+	border-radius: 30rpx;
+	padding-left: 30rpx;
+}
+.pla-style {
+	font-size: 30rpx;
+	color: #b2b2b2;
+}
+.po-icon {
+	font-size: 46rpx;
+	color: #37393e;
+}
+

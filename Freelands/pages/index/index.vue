@@ -1,16 +1,21 @@
 <template>
 	<view class="">
-	<scroll-view class="uni-slidingMenu solid-bottom shadow-warp" scroll-x >
-		<view  :class="['slidingMenuList',activeIndex==index?'active':'']" v-for="(item, index) in list" :key="index" @click="getActive(index)" v-cloak>{{ item }}</view>
+		<view class="preventCollapse">
+			
+		</view>
+	<scroll-view class="uni-slidingMenu solid-bottom addSD  " scroll-x >
+		<view  class="fontSizeSet " :class="['slidingMenuList',activeIndex==index?'active':'']" v-for="(item, index) in list" :key="index" @click="getActive(index)" v-cloak>{{ item }}</view>
 	</scroll-view>
-	<view>
+	<view class="index-content ">
 		<swiper @change="handelSlide" :current='activeIndex'   :style="{height:swiperHeight+'px'}">
 			<swiper-item>
-				<view class="swiper-item list">
+				<view class="swiper-item  list">
 					<view class="content">
-						<view class="text-area">
+						<view class="text-area padding-top shadow-blur">
 							<DaySign></DaySign>
 						</view>
+						<!-- box-shadow: 3px 3px 4px rgba(26, 26, 26, 0.2); -->
+						<!-- box-shadow:0px 10px 5px #000; -->
 						<view class="item-list">
 							<Potery></Potery>
 						</view>
@@ -136,13 +141,17 @@
 			'DaySign':DaySign,
 			'Potery':Potery,
 			'Topics':Topics,
-			ClassifyItem,
+			'ClassifyItem':ClassifyItem,
 		},
 		onLoad() {
 			this.TowerSwiper('swiperList');
 			// 初始化towerSwiper 传已有的数组名即可
 		},
 		onShow() {
+			let attr=getApp().globalData.userinfo;
+			console.log('***')
+			console.log(attr)
+			console.log('***')
 			let _this = this;
 			setTimeout(function(){
 				let list = ".list";
@@ -251,7 +260,17 @@
 	}
 </script>
 
+
 <style>
+	.addSD{
+		/* box-shadow:0px 5px 2px #000; */
+	}
+	.fontSizeSet{
+		font-size: 30upx !important;
+	}
+	.preventCollapse{
+		height: var(--status-bar-height);
+	}
 	.content{
 		background: white;
 		padding-bottom:200upx ;
