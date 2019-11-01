@@ -50,7 +50,7 @@
 		created(){
 			let data = JSON.parse(this.$route.query.detaildata);
 			// let data = this.$route.query;
-			
+			console.log(data);
 			for(let index in data){
 				 this.detaildata[index]=data[index];
 			}
