@@ -17,6 +17,7 @@
 								
 							</text>
 						</view>
+						
 						<!-- box-shadow: 3px 3px 4px rgba(26, 26, 26, 0.2); -->
 						<!-- box-shadow:0px 10px 5px #000; -->
 						<view class="item-list">
@@ -35,15 +36,13 @@
 							<view class="page-section swiper">
 								<view class="page-section-spacing">
 									<swiper class="swiper" :indicator-dots=true :autoplay=true :interval="3000" :circular=true>
-										<swiper-item >
-											<view class="swiper-item uni-bg-red">A</view>
+										<swiper-item v-for="(item,index) in classifylistpost" :key="index">
+											<!-- <view class="swiper-item uni-bg-red"> -->
+												
+												<img :src="item.imgurl" mode="" style="{width:100%}"></img>
+											<!-- </view> -->
 										</swiper-item>
-										<swiper-item>
-											<view class="swiper-item uni-bg-green">B</view>
-										</swiper-item>
-										<swiper-item>
-											<view class="swiper-item uni-bg-blue">C</view>
-										</swiper-item>
+										
 									</swiper>
 								</view>
 							</view>
@@ -137,6 +136,7 @@
 				direction: '',
 				detaillist:[],
 				classifylist:[],
+				classifylistpost:[],
 				
 			}
 		},
@@ -186,7 +186,15 @@
 				success: (resclassify) => {
 					
 					this.classifylist=resclassify.data.data
-					// console.log(this.classifylist)
+					console.log("classifylistpost")
+					console.log(this.classifylist)
+					this.classifylistpost=[];
+					this.classifylist.forEach((val)=>{
+						if(val.ispro){
+							this.classifylistpost.push(val);
+						}
+					})
+					console.log(this.classifylistpost)
 				}
 			})
 			
@@ -425,7 +433,7 @@
 		color: #2c2b32;
 		font-size: 30upx;
 	}
-	.screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
+	.exp-topic .screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
 	    width: 85%;
 	    display: block;
 	    height: 250upx;
@@ -433,6 +441,10 @@
 	    border-radius: 5px;
 	    pointer-events: none;
 	}
+	/* .exprore .screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
+	    width: 100%;
+	    
+	} */
 	/* .card-swiper uni-swiper-item {
 		padding: 0;
 	} */

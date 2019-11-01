@@ -10,7 +10,7 @@
 		</view>
 		<view class="cu-card case" >
 			
-			<view class="cu-item shadow" @click="handelClick">
+			<view class="cu-item shadow" @click="handelClick(detaildata)">
 				<view class="image my_add_boder">
 					<image :src="detaildata.imgurl"
 					 mode="widthFix"></image>
@@ -51,14 +51,38 @@
 			console.log(times)
 		},
 		methods:{
-			handelClick(){
+			handelClick(val){
+				console.log(this.detaildata)
 				var detaildata = JSON.stringify(this.detaildata);
-				// this.$route.query
-				// router.push({ path: 'register', query: { plan: 'private' }})
-				// this.$router.push({path:'/pages/Detail/Detail',query:this.detaildata});
+				// // this.$route.query
+				// // router.push({ path: 'register', query: { plan: 'private' }})
+				// // this.$router.push({path:'/pages/Detail/Detail',query:this.detaildata});
 				uni.navigateTo({
 					url:"/pages/Detail/Detail?detaildata="+detaildata
 				})
+				// uni.request({
+				// 	url:this.base_url+"detaillist",
+				// 	method:'get',
+					
+				// 	success: (resdetail) => {
+						
+				// 		let arr=resdetail.data.data;
+				// 		// console.log(arr);
+				// 		arr.forEach((val1)=>{
+				// 			// console.log(val1.topicname);
+				// 			console.log(val1._id);
+				// 			// console.log(val.topicname===val.name)
+				// 			if(val1._id===val._id){
+				// 				console.log(val1)
+				// 				var detaildata = JSON.stringify(val1);
+				// 				uni.navigateTo({
+				// 					url:"/pages/Detail/Detail?detaildata="+detaildata
+				// 				})
+				// 			}
+				// 		})
+						
+				// 	}
+				// })
 			}
 		}
 	}

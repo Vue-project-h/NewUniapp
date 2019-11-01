@@ -1,12 +1,14 @@
 <template>
 	<view class="classifyitem">
-		<view class="bg-img bg-mask flex align-center" style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg');">
-			<view class=" text-white">
-				<view class=" text-xxl title-text">
-					《飞地》从刊
+		<view class="bg-img bg-mask flex align-center" 
+		:style="{background:'url('+sptdata.imgurl+')'}"
+		>
+			<view class=" text-white title-text">
+				<view class=" text-xxl ">
+					{{sptdata.name}}
 				</view>
 				<view class=" text-lg dis-text">
-					《飞地》从刊创办于2012年春季，以选题策划的方式专辑出版，致力于当代新诗的深度观察以选题策划的方式专辑出版，致力于当代新诗的深度观察
+					{{sptdata.dis}}
 				</view>
 			</view>
 		</view>
@@ -19,6 +21,9 @@
 			return {
 				
 			};
+		},
+		props:{
+			sptdata:Object
 		}
 	}
 </script>
