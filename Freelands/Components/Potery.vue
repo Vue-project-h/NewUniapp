@@ -1,13 +1,6 @@
 <template>
 	<view class="">
-		<view class="my_day padding">
-			<view class="m_d text-gray">
-				10月25日
-			</view>
-			<view class="my_week  text-sl">
-				星期五
-			</view>
-		</view>
+		
 		<view class="cu-card case" >
 			
 			<view class="cu-item shadow" @click="handelClick">
@@ -40,6 +33,8 @@
 		</view>
 	</view>
 </template>
+
+
 
 <script>
 	export default{

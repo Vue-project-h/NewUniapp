@@ -20,6 +20,14 @@
 						<!-- box-shadow: 3px 3px 4px rgba(26, 26, 26, 0.2); -->
 						<!-- box-shadow:0px 10px 5px #000; -->
 						<view class="item-list">
+							<view class="my_day padding">
+								<view class="m_d text-gray">
+									10月25日
+								</view>
+								<view class="my_week  text-sl">
+									星期五
+								</view>
+							</view>
 							<Potery v-for="(item,index) in detaillist" :key="index" :detaildata="item"></Potery>
 						</view>
 						<view class="more">
@@ -56,12 +64,11 @@
 						 	<swiper class="card-swiper"  :circular=true 
 						 	 interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
 						 	 indicator-active-color="#0081ff">
-						 		<swiper-item v-for="(item,index) in swiperList" :key="index" :class="cardCur==index?'cur':''">
+						 		<swiper-item v-for="(item,index) in Myspecial" :key="index" :class="cardCur==index?'cur':''" @click="handelClickMore(item)">
 						 			<view class="swiper-item">
-						 				<image :src="item.url" mode="aspectFill" v-if="item.type=='image'" class="exp-img"></image>
-						 				<video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
-										<view class="img-text">
-											《飞地》从刊
+						 				<image :src="item.imgurl" mode="aspectFill" v-if="item.ispro==true" class="exp-img"></image>
+						 				<view class="img-text">
+											{{item.dis}}
 										</view>
 									</view>
 						 		</swiper-item>
@@ -137,7 +144,7 @@
 				direction: '',
 				detaillist:[],
 				classifylist:[],
-				
+				Myspecial:[],
 			}
 		},
 		components:{
@@ -210,9 +217,34 @@
 			
 			
 			
+			uni.request({
+				url:this.base_url+"speciltopic/list",
+				method:'get',
+				success: (res) => {
+					
+					this.Myspecial=res.data.data
+				}
+			})
+			
+			
 		},
 
 		methods: {
+			handelClickMore(item){
+				console.log(item.name)
+				// uni.request({
+				// 	url:this.base_url+"speciltopic/list",
+				// 	method:'get',
+					
+				// 	success: (res1) => {
+				// 		let myname=res1.data.data
+				// 		console.log(myname)
+				// 	}
+				// })
+				uni.navigateTo({
+					url:`../LookMores/LookMores?name=`+item.name
+				})
+			},
 			handelMoreDaySign(){
 				uni.navigateTo({
 					url:"/pages/daysign/daysign"

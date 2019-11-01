@@ -94,7 +94,6 @@
 					method: 'GET',
 					data: this.noticeobj,
 					success:(res)=> {
-						console.log(111111111112)
 						if(this.isnotice){
 							uni.showToast({
 								title:"关注成功！",

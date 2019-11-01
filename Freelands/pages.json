@@ -212,6 +212,12 @@
 				}
 			}
 		}
+        ,{
+            "path" : "pages/LookMores/LookMores",
+            "style" : {
+				"navigationStyle":"custom"
+			}
+        }
     ],
 
 	"globalStyle": {
