@@ -10,7 +10,7 @@ Vue.config.productionTip = false
 // Vue.prototype.base_url="http://localhost:3000"
 
 
-Vue.prototype.base_url="http://localhost:3008/"
+Vue.prototype.base_url="http://122.51.43.206:3008/"
 App.mpType = 'app'
 
 const app = new Vue({

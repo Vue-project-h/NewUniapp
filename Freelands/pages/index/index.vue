@@ -50,8 +50,7 @@
 						 </view>
 						 <view class="exp-topic">
 							 <view class="title ti-more">
-							 	专题
-								
+							 	专题	
 								<text class="look-more" @click="handelMoreTopic">更多</text>
 							 </view>
 						 	<swiper class="card-swiper"  :circular=true 

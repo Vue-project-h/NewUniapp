@@ -1,5 +1,8 @@
 <template>
-	<view class="cu-list menu-avatar comment solids-top comment-bgc">
+	<view class="">
+		
+	
+	<view class="cu-list menu-avatar comment solids-top comment-bgc" >
 		<view class="cu-item">
 			<view class="cu-avatar round head-img" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
 			
@@ -27,6 +30,7 @@
 			
 		</view>
 		
+	</view>
 	</view>
 </template>
 
