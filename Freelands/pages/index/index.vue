@@ -35,7 +35,7 @@
 							<view class="page-section swiper">
 								<view class="page-section-spacing">
 									<swiper class="swiper" :indicator-dots=true :autoplay=true :interval="3000" :circular=true>
-										<swiper-item>
+										<swiper-item >
 											<view class="swiper-item uni-bg-red">A</view>
 										</swiper-item>
 										<swiper-item>
@@ -50,8 +50,7 @@
 						 </view>
 						 <view class="exp-topic">
 							 <view class="title ti-more">
-							 	专题
-								
+							 	专题	
 								<text class="look-more" @click="handelMoreTopic">更多</text>
 							 </view>
 						 	<swiper class="card-swiper"  :circular=true 
@@ -134,10 +133,11 @@
 					url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
 				}],
 				dotStyle: false,
-				towerStart: 0,
+				towerStart: 0, 
 				direction: '',
 				detaillist:[],
-				classifylist:[]
+				classifylist:[],
+				
 			}
 		},
 		components:{
@@ -149,6 +149,7 @@
 		onLoad() {
 			this.TowerSwiper('swiperList');
 			// 初始化towerSwiper 传已有的数组名即可
+			
 		},
 		onShow() {
 			let attr=getApp().globalData.userinfo;
@@ -156,10 +157,7 @@
 			console.log(attr)
 			console.log('***')
 			let _this = this;
-			setTimeout(function(){
-				let list = ".list";
-				_this.getlistHeight(list);
-			},10) 
+			
 			
 			uni.getStorage({
 			    key: 'token',
@@ -201,8 +199,12 @@
 					
 					this.detaillist=resdetail.data.data;
 					
-					console.log(this.detaillist);
-					
+					// console.log(this.detaillist);
+					// 设置页面元素高度，在大量数据加载完成后
+					setTimeout(function(){
+						let list = ".list";
+						_this.getlistHeight(list);
+					},100) 
 				}
 			})
 			
@@ -246,9 +248,12 @@
 				
 			},
 			handelSlide(detail){
+				// console.log(detail)
 				this.activeIndex=detail.detail.current;
+				
 				  let _this = this;
 				  		// 不同的tab不同的高度赋不同的值
+						// console.log(detail.target.current)
 				  		if(detail.target.current==0){
 				  			let list = ".list";
 				  			_this.getlistHeight(list);
@@ -336,8 +341,8 @@
 	}
 	.more-daysign{
 		position: absolute;
-		right: 40upx;
-		top: 10upx;
+		right: 54upx;
+		top: 50upx;
 		z-index: 2;
 		font-size: 40upx;
 	}
@@ -398,11 +403,11 @@
 		justify-content: space-between;
 	}
 	
-	/* .card-swiper uni-swiper-item {
+	.card-swiper uni-swiper-item {
 	    width: 650upx !important;
 	    padding:0px;
 		height:370upx
-	} */
+	}
 	.card-swiper {
 	    height: 300upx !important;
 	}
@@ -420,12 +425,15 @@
 		color: #2c2b32;
 		font-size: 30upx;
 	}
-	/* .screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
-	    width: 100%;
+	.screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
+	    width: 85%;
 	    display: block;
 	    height: 250upx;
 	    margin: 0;
 	    border-radius: 5px;
 	    pointer-events: none;
+	}
+	/* .card-swiper uni-swiper-item {
+		padding: 0;
 	} */
 </style>

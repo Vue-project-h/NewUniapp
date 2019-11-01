@@ -56,13 +56,34 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _C_U
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 eval("//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxNzUuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///175\n");
+=======
+<<<<<<< HEAD
+eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar _default =\n{\n  data: function data() {\n    return {\n      topiclist: {} };\n\n  },\n  methods: {\n    handelmtopic: function handelmtopic() {\n      uni.navigateTo({\n        url: \"/pages/moretopic/mtopic\" });\n\n    } },\n\n  mounted: function mounted() {var _this = this;\n    uni.request({\n      url: this.base_url + \"topic/list\",\n      method: 'get',\n\n      success: function success(resdetail) {\n\n\n        _this.topiclist = resdetail.data.data[0];\n\n        // console.log(this.topiclist);\n        // 设置页面元素高度，在大量数据加载完成后\n\n      } });\n\n  } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ 1)[\"default\"]))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVuaS1hcHA6Ly8vY29tcG9uZW50cy9NeVRvcGljcy52dWUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFpQkE7QUFDQSxNQURBLGtCQUNBO0FBQ0E7QUFDQSxtQkFEQTs7QUFHQSxHQUxBO0FBTUE7QUFDQSxnQkFEQSwwQkFDQTtBQUNBO0FBQ0Esc0NBREE7O0FBR0EsS0FMQSxFQU5BOztBQWFBLFNBYkEscUJBYUE7QUFDQTtBQUNBLHVDQURBO0FBRUEsbUJBRkE7O0FBSUE7OztBQUdBOztBQUVBO0FBQ0E7O0FBRUEsT0FaQTs7QUFjQSxHQTVCQSxFIiwiZmlsZSI6IjE1OS5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cclxuXHQ8dmlldyBjbGFzcz1cInBhZGRpbmdcIj5cclxuXHRcdFx0PHZpZXcgY2xhc3M9XCJ0b3BpYy10b3BiYXIgZmxleFwiPlxyXG5cdFx0XHRcdDx0ZXh0IGNsYXNzPSd0ZXh0LWJsYWNrIHRleHQtYm9sZCB0ZXh0LXh4bCAnPuivnemimDwvdGV4dD5cclxuXHRcdFx0XHQ8dGV4dCBjbGFzcz0gJ3RleHQtYmx1ZScgQGNsaWNrPVwiaGFuZGVsbXRvcGljXCI+5pu05aSaPC90ZXh0PlxyXG5cdFx0XHQ8L3ZpZXc+XHJcblx0XHRcdDx2aWV3IGNsYXNzPVwiY3VJY29uLW5ldyB0ZXh0LWdyYXkgdGV4dC1zbCBwYWRkaW5nLXRvcCBwYWRkaW5nLWJvdHRvbVwiPjwvdmlldz5cclxuXHRcdFx0PHZpZXcgY2xhc3M9XCJpdGVtcyB0ZXh0LWJsYWNrIHRleHQteHhsXCI+XHJcblx0XHRcdFx0e3t0b3BpY2xpc3QubmFtZX19XHJcblx0XHRcdDwvdmlldz5cclxuXHRcdFx0PHZpZXcgY2xhc3M9XCJteV90YWxrIHRleHQtZ3JheSBwYWRkaW5nLXRvcC1zbVwiPlxyXG5cdFx0XHRcdDg05Liq6K6o6K66XHJcblx0XHRcdDwvdmlldz5cclxuXHRcdDwvdmlldz5cclxuPC90ZW1wbGF0ZT5cclxuXHJcbjxzY3JpcHQ+XHJcblx0ZXhwb3J0IGRlZmF1bHR7XHJcblx0XHRkYXRhKCl7XHJcblx0XHRcdHJldHVybntcclxuXHRcdFx0XHR0b3BpY2xpc3Q6e31cclxuXHRcdFx0fVxyXG5cdFx0fSxcclxuXHRcdG1ldGhvZHM6e1xyXG5cdFx0XHRoYW5kZWxtdG9waWMoKXtcclxuXHRcdFx0XHR1bmkubmF2aWdhdGVUbyh7XHJcblx0XHRcdFx0XHR1cmw6XCIvcGFnZXMvbW9yZXRvcGljL210b3BpY1wiXHJcblx0XHRcdFx0fSlcclxuXHRcdFx0fVxyXG5cdFx0fSxcclxuXHRcdG1vdW50ZWQoKXtcclxuXHRcdFx0dW5pLnJlcXVlc3Qoe1xyXG5cdFx0XHRcdHVybDp0aGlzLmJhc2VfdXJsK1widG9waWMvbGlzdFwiLFxyXG5cdFx0XHRcdG1ldGhvZDonZ2V0JyxcclxuXHRcdFx0XHRcclxuXHRcdFx0XHRzdWNjZXNzOiAocmVzZGV0YWlsKSA9PiB7XHJcblx0XHRcdFx0XHRcclxuXHRcdFx0XHRcdFxyXG5cdFx0XHRcdFx0dGhpcy50b3BpY2xpc3Q9cmVzZGV0YWlsLmRhdGEuZGF0YVswXTtcclxuXHRcdFx0XHRcdFxyXG5cdFx0XHRcdFx0Ly8gY29uc29sZS5sb2codGhpcy50b3BpY2xpc3QpO1xyXG5cdFx0XHRcdFx0Ly8g6K6+572u6aG16Z2i5YWD57Sg6auY5bqm77yM5Zyo5aSn6YeP5pWw5o2u5Yqg6L295a6M5oiQ5ZCOXHJcblx0XHRcdFx0XHRcclxuXHRcdFx0XHR9XHJcblx0XHRcdH0pXHJcblx0XHR9XHJcblx0fVxyXG48L3NjcmlwdD5cclxuXHJcbjxzdHlsZT5cclxuXHQudG9waWMtdG9wYmFye1xyXG5cdFx0anVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG5cdH1cclxuPC9zdHlsZT5cclxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///159\n");
+=======
+<<<<<<< HEAD
+eval("//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxNTUuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///155\n");
+>>>>>>> master
 
 /***/ }),
 
 /***/ 176:
 /*!**************************************************************************************************************!*\
   !*** D:/100phone/pro-3/FL/MyFl/NewUniapp/Freelands/components/MyTopics.vue?vue&type=style&index=0&lang=css& ***!
+<<<<<<< HEAD
+=======
+=======
+eval("//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxNTkuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///159\n");
+>>>>>>> origin
+
+/***/ }),
+
+/***/ 160:
+/*!**************************************************************************************************************!*\
+  !*** E:/uniapp/uni-app-project/NewUniapp/Freelands/components/MyTopics.vue?vue&type=style&index=0&lang=css& ***!
+>>>>>>> master
+>>>>>>> master
   \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {

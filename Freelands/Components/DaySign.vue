@@ -1,6 +1,6 @@
 <template>
 	<view class="daysign" @click="handelDaySign">
-		<image src="../../static/image/daysign.jpg" mode=""></image>
+		<image :src="data.imgurl" mode=""></image>
 		<view class='ds_day'>
 			<text>24</text>
 			<view class="ds_day_time">
@@ -21,7 +21,7 @@
 			</view>
 		</view>
 		<view class="author">
-			{{data.auther}}
+			{{data.author}}
 		</view>
 	</view>
 </template>
@@ -45,12 +45,13 @@
 		},
 		mounted() {
 			
-			// // console.log(this.dsitem)
-			// if(this.dsitem!==undefined){
-			// 	console.log("dsitem")
-			// }else{
+			
+			if(this.data1.author){
+				console.log("dsitem")
+				this.data=this.dsitem;
+			}else{
 				uni.request({
-					url: 'http://rap2api.taobao.org/app/mock/234629/get/daysign',
+					url: this.base_url+"daysign/list",
 					method: 'GET',
 					success: res => {
 						let arr=res.data.data.map((obj)=>{
@@ -62,6 +63,7 @@
 				});
 			// }
 			
+		}
 		},
 		methods:{
 			handelDaySign(){

@@ -4,8 +4,12 @@
     "pages/clntest/clntest",
     "pages/Detail/Detail",
     "pages/moretopic/moretopic",
+<<<<<<< HEAD
     "pages/clntest/clntest",
     "pages/Detail/Detail",
+=======
+    "pages/moretopic/mtopic",
+>>>>>>> master
     "pages/foucse/foucse",
     "pages/create/create",
     "pages/moretopic/moretopic",

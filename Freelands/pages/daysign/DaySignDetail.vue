@@ -1,7 +1,7 @@
 <template>
 	<view class="dsinfo">
 		<view class="daysign">
-			<image src="../../static/image/daysign.jpg" mode=""></image>
+			<image :src="data1.imgurl" mode=""></image>
 			<view class='ds_day'>
 				<text>24</text>
 				<view class="ds_day_time">
@@ -24,7 +24,7 @@
 			</view>
 		</view>
 		<view class="author">
-			{{data1.auther}}
+			{{data1.author}}
 		</view>
 	</view>
 </template>
