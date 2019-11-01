@@ -154,7 +154,7 @@
 				    key: 'userinfo',
 				    success: function (res) {
 				        console.log('success');
-						getApp().globalData.userinfo='';
+						getApp().globalData.userinfo={};
 						uni.reLaunch({
 						    url: '../index/index'
 						});

@@ -15,7 +15,7 @@
 					</view>
 				</view>
 				
-				<text class="notice noticecheck">关注</text>
+				<text class="notice noticecheck" @click="handelNotice">关注</text>
 			</view>
 			<view class="a-img shadow">
 				<image :src="authordata.imgurl"></image>
@@ -31,14 +31,41 @@
 	export default{
 		data(){
 			return{
-				authordata:{}
+				authordata:{},
+				noticeobj:{},
+				isnotice:false,
+				df1:'',
+				df2:'',
+				usernotice:false
 			}
 		},
 		props:{
-			authorname:String
+			authorname:String,
+			zpid:String,
 		},
 		created(){
-			console.log(this.authorname)
+			try {
+				const value = uni.getStorageSync('userinfo');
+				if (value) {
+					this.noticeobj.name = value.userinfo.name;
+				}
+			} catch (e) {
+				console.log(e)
+			}
+			this.noticeobj.zpid=this.zpid
+			this.noticeobj.isnotice=this.isnotice
+			this.noticeobj.df1=this.df1
+			this.noticeobj.df2=this.df2
+			var _this=this;
+			uni.request({
+				url: this.base_url + 'attention/searchnotice',
+				method: 'GET',
+				data: this.noticeobj,
+				success:(res)=> {
+					_this.usernotice=res.data.data[0].isnotice
+				}
+			})
+			
 			uni.request({
 				url:this.base_url+"author/list",
 				method:'get',
@@ -54,10 +81,36 @@
 							this.authordata=val;
 						}
 					})
-					console.log(this.authordata);
-					// this.authordata=
 				}
 			})
+		},
+		methods:{
+			handelNotice(){
+				this.isnotice=!this.isnotice
+				console.log(this.isnotice)
+				this.noticeobj.isnotice=this.isnotice
+				uni.request({
+					url: this.base_url + 'attention/notice',
+					method: 'GET',
+					data: this.noticeobj,
+					success:(res)=> {
+						console.log(111111111112)
+						if(this.isnotice){
+							uni.showToast({
+								title:"关注成功！",
+								icon:null
+							})
+						}else{
+							uni.showToast({
+								title:"取消关注成功",
+								icon:null
+							})
+						}
+					}
+				})
+				
+				
+			}
 		}
 	}
 </script>

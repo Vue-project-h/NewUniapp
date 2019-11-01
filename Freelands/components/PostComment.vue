@@ -1,21 +1,10 @@
 <template>
-	<view class="postcommen">
-		<input type="text" class="inp-text" placeholder="发表评论" placeholder-class="pla-style">
-		<view class="pos-msg">
-			<text class="cuIcon-message po-icon"></text>
-			<text>1</text>
-		</view>
-		
-		<text class="cuIcon-like po-icon"></text>
-	</view>
+	
 </template>
 
-<script>
-</script>
-
 <style>
-	.postcommen{
-		
+	.postcommen {
+
 		z-index: 2;
 		background-color: #fff;
 		position: fixed;
@@ -28,6 +17,7 @@
 		justify-content: space-around;
 		align-items: center;
 	}
+
 	.inp-text {
 		width: 486upx;
 		height: 60upx;
@@ -35,12 +25,13 @@
 		border-radius: 30upx;
 		padding-left: 30upx;
 	}
+
 	.pla-style {
 		font-size: 30upx;
 		color: #b2b2b2;
-		
+
 	}
-	
+
 	.po-icon {
 		font-size: 46upx;
 		color: #37393e;

@@ -22,8 +22,6 @@
 	width: 185rpx;
 	height: 185rpx;
 }
-.content-left{
-}
 .content-title{
 	font-size: 30rpx;
 	font-weight: 800;

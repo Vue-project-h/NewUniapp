@@ -6,16 +6,16 @@
 		</view>
 		
 		<view class="bg-white">
-			<DetailAuthor :authorname="detaildata.authorname"></DetailAuthor>
+			<DetailAuthor :zpid="detaildata._id" :authorname="detaildata.authorname"></DetailAuthor>
 			<ExproreText :text="detaildata.content" :title="detaildata.title"></ExproreText>
 			<DetailFooter :foot="detaildata.textfoot"></DetailFooter>
-			<PostComment></PostComment>
+			<!-- <PostComment ></PostComment> -->
 			<view class="d-comment">
 				<view class="co-title">
 					最新评论
 				</view>
 				<view class="commentlist">
-					<CommentItem></CommentItem>
+					<CommentItem :comeninfo="detaildata._id"></CommentItem>
 				</view>
 			</view>
 		</view>
@@ -31,7 +31,7 @@
 	import DetailAuthor from '../../components/DetailAuthor.vue'
 	import ExproreText from '../../components/ExproreText.vue'
 	import DetailFooter from '../../components/DetailFooter.vue'
-	import PostComment from '../../components/PostComment.vue'
+	// import PostComment from '../../components/PostComment.vue'
 	import CommentItem from '../../components/CommentItem.vue'
 	export default {
 		data(){
@@ -42,7 +42,7 @@
 		components:{
 			DetailAuthor,
 			DetailFooter,
-			PostComment,
+			// PostComment,
 			ExproreText,
 			CommentItem
 		},
@@ -54,7 +54,7 @@
 			for(let index in data){
 				 this.detaildata[index]=data[index];
 			}
-			
+			// console.log(this.detaildata)
 		}
 	}
 </script>

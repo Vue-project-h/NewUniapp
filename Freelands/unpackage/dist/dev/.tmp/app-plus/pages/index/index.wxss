@@ -1,14 +1,10 @@
 
-<<<<<<< HEAD
-.addSD{
-	/* box-shadow:0px 5px 2px #000; */
-}
 .fontSizeSet{
 	font-size: 30rpx !important;
 }
 .preventCollapse{
 	height: var(--status-bar-height);
-=======
+}
 .ta {
 	position: relative;
 }
@@ -18,7 +14,6 @@
 	top: 10rpx;
 	z-index: 2;
 	font-size: 40rpx;
->>>>>>> master
 }
 .content{
 	background: white;
@@ -60,10 +55,6 @@ page{
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-swiper-item{
-	/* min-height:50upx ; */
-	/* background: red; */
-}
 .exprore {
 	padding: 0 30rpx;
 }
@@ -88,19 +79,11 @@ swiper-item{
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
-<<<<<<< HEAD
-.card-swiper uni-swiper-item {
-    width: 80% !important;
-    padding:0px;
-	height:256rpx
-}
-=======
 /* .card-swiper uni-swiper-item {
     width: 650upx !important;
     padding:0px;
 	height:370upx
 } */
->>>>>>> master
 .card-swiper {
     height: 300rpx !important;
 }
@@ -113,7 +96,7 @@ swiper-item{
 	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	pos-bottom: 20rpx;
+	padding-bottom: 20rpx;
 }
 .look-more {
 	font-size: 30rpx;
@@ -122,17 +105,6 @@ swiper-item{
 .img-text {
 	color: #2c2b32;
 	font-size: 30rpx;
-<<<<<<< HEAD
-}
-.screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
-    width: 100%;
-    display: block;
-    height: 250rpx;
-    margin: 0;
-    border-radius: 5px;
-    pointer-events: none;
-}
-=======
 }
 /* .screen-swiper uni-image, .screen-swiper uni-video, .swiper-item uni-image, .swiper-item uni-video {
     width: 100%;
@@ -142,5 +114,4 @@ swiper-item{
     border-radius: 5px;
     pointer-events: none;
 } */
->>>>>>> master
 

@@ -213,7 +213,5 @@
 	line-height: 2.2;
 	vertical-align: middle;
 }
-.input-content {
-	min-height: ;
-}
+
 

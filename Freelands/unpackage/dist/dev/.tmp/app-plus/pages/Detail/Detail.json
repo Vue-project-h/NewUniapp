@@ -4,13 +4,13 @@
   "titleNView": {
     "buttons": [
       {
-        "color": "#57585c",
-        "colorPressed": "#57585c",
-        "float": "right",
-        "fontSize": "22px",
+        "color": "#1a1a1a",
+        "colorPressed": "#1a1a1a",
+        "float": "left",
+        "fontSize": "16px",
         "fontWeight": "bold",
         "fontSrc": "/static/iconfont.ttf",
-        "text": ""
+        "text": "全部专题"
       }
     ]
   },

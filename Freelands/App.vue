@@ -3,7 +3,7 @@
 	
 	export default {
 		globalData:{
-			userinfo:{}
+			userinfo:{},
 		},
 		created() {
 			// #ifdef APP-PLUS

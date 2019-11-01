@@ -1,6 +1,6 @@
 <template>
-	<view>
-		<scroll-view scroll-x class="bg-white nav text-center my-nav text-pink">
+	<view class="adpost">
+		<scroll-view scroll-x class="bg-white nav text-center my-nav text-white">
 			<view class="cu-item fl" >
 				<text class="cuIcon-notice"></text> 
 			</view>
@@ -66,9 +66,13 @@
 </script>
 
 <style>
+	.adpost{
+		position: relative;
+	}
 		.my-nav{
-			position: relative;
-			top:var(--status-bar-height);
+			position: absolute;
+			top:0upx;
+			z-index: 111;
 			background-color:transparent;
 			/* color: white; */
 			font-weight: 900;
